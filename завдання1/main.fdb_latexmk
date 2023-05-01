@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1682955609 "c:/Users/nickk/OneDrive/Робочий стіл/Нова папка (4)/main.tex" "main.pdf" "main" 1682955612 0
+["pdflatex"] 1682959590 "c:/Users/nickk/classes_notes/завдання1/main.tex" "main.pdf" "main" 1682959593 0
   "c:/Games/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc" 1680001165 3141 82d5616418ed8d5de703b3951bedecb4 ""
   "c:/Games/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1680002471 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/Games/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm" 1680003176 7040 b2bd27e2bfe6f6948cbc3239cae7444f ""
@@ -234,11 +234,11 @@
   "c:/Users/nickk/.texlive2023/texmf-var/fonts/tfm/lh/lh-t2a/larm1000.tfm" 1680012835 3220 0e417eaf233b160335902e97259a6c77 ""
   "c:/Users/nickk/.texlive2023/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm" 1680010181 3240 c2435f2b5cd66d4930bc29b8df87967e ""
   "c:/Users/nickk/.texlive2023/texmf-var/fonts/tfm/lh/lh-t2a/larm1728.tfm" 1680010548 3252 3140686608bdcae603a09a7973fb9e55 ""
-  "c:/Users/nickk/OneDrive/Робочий стіл/Нова папка (4)/main.tex" 1682955608 4087 2a0f9da51fa21ea05e022d8fb127b3f5 ""
-  "main.aux" 1682955612 1038 b86dc51bfeb8c1221040dc4f59dc5133 "pdflatex"
-  "main.out" 1682955612 240 bf4ee95d907d64480e13647934836578 "pdflatex"
-  "main.tex" 1682955608 4087 2a0f9da51fa21ea05e022d8fb127b3f5 ""
-  "main.toc" 1682955612 180 1fd0ceb1f9fdc86de07da48aea85c84f "pdflatex"
+  "c:/Users/nickk/classes_notes/завдання1/main.tex" 1682959589 4555 687d2e173cfbc0d348580a900e0ef478 ""
+  "main.aux" 1682959593 1229 4b916f597ce73988e72d1bb0078cdd92 "pdflatex"
+  "main.out" 1682959593 360 3bbe9f1595f9013c85647fafd53c024a "pdflatex"
+  "main.tex" 1682959589 4555 687d2e173cfbc0d348580a900e0ef478 ""
+  "main.toc" 1682959593 254 ab43697a6934461214b9b2d2863abc22 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

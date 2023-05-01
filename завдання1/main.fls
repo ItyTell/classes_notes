@@ -1,8 +1,8 @@
-PWD c:/Users/nickk/OneDrive/Робочий стіл/Нова папка (4)
+PWD c:/Users/nickk/classes_notes/завдання1
 INPUT c:/Games/texlive/2023/texmf.cnf
 INPUT c:/Games/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/Games/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/nickk/OneDrive/Робочий стіл/Нова папка (4)/main.tex
+INPUT c:/Users/nickk/classes_notes/завдання1/main.tex
 OUTPUT main.log
 INPUT c:/Games/texlive/2023/texmf-dist/tex/latex/extsizes/extreport.cls
 INPUT c:/Games/texlive/2023/texmf-dist/tex/latex/extsizes/extreport.cls
