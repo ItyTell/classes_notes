@@ -1,0 +1,158 @@
+
+\subsection{first task}
+
+\begin{tcolorbox}[title=Task1]
+    \begin{center}
+        $ u_{tt} + 2u_t = u_{xx} + 8 u + 2x(1-4t) + cos3x,\ 0<x<\frac{\pi}{2} $ \\
+        $ u_x |_{x=0}=t,\ u|_{x=\frac{\pi}{2}} = \frac{\pi t}{2},\ u|_{t=0} = 0, \ u_t|_{t = 0} = 2x  $
+    \end{center}
+\end{tcolorbox}
+
+
+
+\begin{center}
+    Зведемо граничні умови до однорідних, знайшовиши таку $ w(x,t) $, що 
+    $ w_x |_{x=0}=t,\ w|_{x=\frac{\pi}{2}} = \frac{\pi t}{2} \Rightarrow w(x,t)=xt $ 
+
+
+    Підставимо $ u = w + v$ у вихідне рівняння: 
+    $ v_{tt} +2v_t + \cancel{2x} = v_{xx} + 8v + \cancel{8tx} + \cancel{2x(1 - 4t)} +cos3x $
+
+
+    Отримаємо: $ v_{tt} +2v_t + = v_{xx} + 8v + cos3x $ 
+
+
+    $ v_x |_{x=0}=0,\ v|_{x=\frac{\pi}{2}} = 0,\ v|_{t=0} = 0, \ v_t|_{t = 0} = x  $ 
+
+
+    Однорідне рівняння:
+    $ v_{tt} +2v_t + = v_{xx} + 8v $
+
+
+    Шукаємо частинні розв'язки у вигляді: $ v(x,t) = X(x)T(t) $  
+
+
+    $ T''X + 2T'X = TX'' +8XT $
+    , поділивши на XT  $\Rightarrow \frac{T'' + 2T'}{T} = \frac{X'' +8X}{X} $
+
+
+    Зліва маємо функцію від t, справа маємо функцію від x , отже вони дорівнюють костанті  
+
+
+    $\frac{T'' + 2T'}{t} = \frac{X'' +8X}{X}  = -\lambda$
+    Вихідне рівняння: 
+    $ X''+ X(8-\lambda) = 0 $  
+
+
+    Граничні умови
+    $ T(t)X'(0)=0 \Rightarrow X'(0)=0,\ T(t)X(\frac{\pi}{2})=0 \Rightarrow X(\frac{\pi}{2}) = 0 $
+
+
+    Задача Штурма-Ліувілля:
+    \begin{equation}
+        \begin{cases}
+        X''+ X(8-\lambda) = 0\\ 
+        X'(0)=X(\frac{\pi}{2}) = 0
+        \end{cases}
+        \label{Shturm1}
+    \end{equation} 
+
+
+    Нехай $ \lambda + 8 > 0 $ тоді 
+
+
+    $ X(x)= C_1 \cos{\sqrt{\lambda + 8} x} + C_2 \sin{\sqrt{\lambda + 8} x} $
+
+
+    $ X'(x)= \sqrt{\lambda + 8}(-C_1 \sin{\sqrt{\lambda + 8} x} + C_2 \cos{\sqrt{\lambda + 8} x}) $
+
+
+    Підставивши в граничні умови задачі \ref{Shturm1} отримаємо:
+
+
+    \begin{equation}
+        \begin{cases}
+            X'(0) = \sqrt{\lambda + 8} C_2 = 0 \\
+            X(\frac{\pi}{2}) = C_1 \cos{\sqrt{\lambda + 8}\frac{\pi}{2}} + C_2 \sin{\sqrt{\lambda + 8}\frac{\pi}{2}} = 0
+        \end{cases}
+    \end{equation}
+
+
+    Позначимо $ \sqrt{\lambda + 8} $ за $ \mu $, тоді (задля забезпечення нетривіальності розв'язку):
+
+
+    $ C_2 = 0, C_1 \cos{\mu \frac{\pi}{2}} = 0 \Rightarrow \cos{\mu \frac{\pi}{2}} = 0 \Rightarrow \mu \frac{\pi}{2} = (2k + 1) \frac{\pi}{2} \Rightarrow \mu = 2k + 1, k \in N $
+    
+
+    $ \lambda_k = (2k + 1)^2 - 8, X_k(x) = \cos{((2k + 1)x)} $
+
+
+    Розв'язок шукаємо у вигляді ряда фур'є:
+
+
+    $ v(x, t)=\sum_{k=0}^{\infty} T_k(t) X_k(x)$
+
+
+    Підставимо в рівняння та початкові умови:
+
+    $\begin{aligned} & \sum_{k=0}^{\infty}\left(T_k^{\prime \prime}+2 T_k^{\prime}\right) X_k-T_k\left(X_k^{\prime \prime}+8 X_k\right)=\cos 3 x \\ & \text { Оскільки } X_k^{\prime \prime}=-\left(\lambda_k+8\right) X_k \\ & \sum_{k=0}^{\infty}\left(T_k^{\prime \prime}+2 T_k^{\prime}+\lambda_k T_k\right) X_k=\cos 3 x=\sum_{k=0}^{\infty} f_k(t) X_k(x) \\ & \quad \text { Звідси } T_k^{\prime \prime}+2 T_k^{\prime}+\lambda_k T_k=f_k(t)\end{aligned}$
+
+
+    З початкових умов маємо: 
+
+
+    $\sum_{k=0}^{\infty} T_k(0) X_k(x)=0 \Rightarrow T_k(0)=0  $
+
+    $\sum_{k=0}^{\infty} T_k^{\prime}(0) X_k(x) = x = \sum_{k=0}^{\infty} \varphi_k X_{k}(x)$
+
+
+    $f_{k}=\frac{(\cos 3 x, X_k(x))}{(X_k(x), X_k(x))}=\frac{\int_0^{\frac{\pi}{2}} \cos 3 x \cdot \cos ((2 k+1) x)}{\int_0^{\frac{\pi}{2}} \cos ^2 ((2 k+1) x) d x}= \begin{cases}
+    1, k=1 \\
+    0, k \neq 1
+    \end{cases} $ 
+    
+    
+    $ \varphi_k=\frac{(X_1 X_k(x))}{(X_k(x), X_k(x))}=\frac{\int_{0}^{\frac{\pi}{2}} x \cos ((2 k+1) x) d x}{\int_0^\pi \cos ^2((2 k+1) x) d x}$
+
+
+    Таким чином маємо декілька задач Коші:
+
+
+    $\begin{aligned}
+    & \left\{\begin{array}{l}
+    T_k^{\prime \prime}+2 T_k^{\prime}+\lambda_k T_k=f_k \\
+    T_k(0)=0, T_k^{\prime}(0)=\varphi_k
+    \end{array}\right. \\
+    & \text { При } k=1 \\
+    & \begin{cases}T_1+2 T_1^{\prime \prime}+T_1=1 & \text { Запишим однорідне рівняння } \\
+    T_{1}(0)=0, T_1^{\prime}(0)=\varphi_1 & \ \tilde{T}_1^{\prime \prime}+2 \tilde{T}_1^{\prime}+\tilde{T}_1=0\end{cases} \\
+    &
+    \end{aligned}
+    $
+
+    $\begin{aligned} & T_1(t)=(a_1+t+b_1) e^{-t}+ 1 \\ & T_1(0)=b_1+1=0 \Rightarrow b_1=-1 \\ & T_1^{\prime}(t)=\left.\left(a_1 e^{-t}-\left(a_1 t+b_1\right) e^{-t}\right)\right|_{t=0}=a_1-b_1=\varphi_1 \Rightarrow a_1=\varphi_{1} - 1 \\ & T_1(t)=\left(\left(\varphi_1 - 1\right) t-1\right) e^{-t}+1 \\ & \text { Якщо } k=0 \\ & \begin{cases}T_0^{\prime \prime}+2 T_0^{\prime}-7 T_0^{\prime}=0 & \mu^2+2 \mu-7=0 \\ T_0(0)=0, T_0^{\prime}(0)=\varphi_0 & \mu_{1,2}=-1 \pm \sqrt{1+7}=-1 \pm 2 \sqrt{2}\end{cases} \\ & T_0(t)=a_0 e^{(-1- 2 \sqrt{2}) t}+b_0 e^{(-1+2 \sqrt{2}) t} \\ & T_0(0)=a_0+b_0=0 \\ & T_0^{\prime}(t)=a_0(-1-2 \sqrt{2}) e^{(-1-2 \sqrt{2})+}+b_0(-1+2 \sqrt{2}) e^{(-1 + 2 \sqrt{2}) t} \\ & \end{aligned}$
+
+
+    $\begin{aligned} & T_{(0)}^{\prime}=a_0(-1-2 \sqrt{2})+b_0(-1+2 \sqrt{2})=\varphi_0 \\ & a_0=-b_0 \\ & b_0(-1+2 \sqrt{2}+1+2 \sqrt{2})=\varphi_0 ; \quad 4 \sqrt{2} b_0=\varphi_0 \\ & b_0=\frac{\varphi_0}{4 \sqrt{2}} ; \quad a_0=-\frac{\varphi_0}{4 \sqrt{2}} \\ & T_0(t)=\frac{\varphi_0}{4 \sqrt{2}}\left(e^{(-1+2 \sqrt{2}) t}-e^{(-1-2 \sqrt{2}) t}\right) \\ & \text { Нехай } k>1 \\ & \left\{\begin{array}{l}T_k^{\prime \prime}+2 T_k^{\prime}+\lambda_k T_k=0 \\ T_{k(0)}=0, T_k^{\prime}(0)=\varphi_k\end{array} \quad \lambda_k=(2 k+1)^2-8>0\right. \\ & \end{aligned}$
+
+    $\begin{aligned} & \mu_k^2+2 \mu_k+\lambda_k=0 \quad \mu_k^{(1, 2)}=-1 \pm \sqrt{1-\lambda_k}= \\ & =-1 \pm i \sqrt{\lambda_1-1} \\ & T_k(t)=\left(a_k \cos \sqrt{\lambda_t-1} t+b_k \sin \sqrt{\lambda_{k} - 1 } t\right) e^{-t} \\ & T_k^{\prime}(t)=-\left(a_k \cos \sqrt{\lambda_{k} - 1}t+b_k \sin \sqrt{\lambda_{k} - 1}t\right) e^{-t}+ \\ & +\sqrt{\lambda_k - 1}\left(-a_k \sin \sqrt{\lambda_k-1} t+b_k \cos \sqrt{\lambda_k-1} t\right) e^{-t} \\ & T_k(0)=a_k=0 \Rightarrow a_k=0 \\ & T_k^{\prime}(0)=\sqrt{\lambda_k-1} b_k=\varphi_k \Rightarrow b_k=\frac{\varphi_k}{\sqrt{\lambda_k-1}} \\ & \end{aligned}$
+
+    $ T_k(t)=\frac{\varphi_k}{\sqrt{\lambda_k-1}} \sin \sqrt{\lambda_k-1} t e^{-t} $
+    
+
+    $ U(x, t)=x t+T_0(t) \cos x+T_1(t)  \cos 3 x +  \sum_{k=2}^{\infty} T_k(t) \cos (2 k + 1) x ;$
+
+
+
+\end{center}
+
+
+
+\begin{tcolorbox}[title=Task2 (20.16 (4))]
+    \begin{center}
+        $\begin{aligned} & u_{t t}-7 u_t=u_{x x}+2 u_x-2 t-7 x-e^{-x} \sin 3 x \quad 0<x<\pi \\ & \left.u\right|_{x=0}=0,\left.u\right|_{x=\pi}=\pi t,\left.u\right|_{t=0}=\left.0 \quad u_t\right|_{t=0}=x\end{aligned}$
+    \end{center}
+\end{tcolorbox}
+
+
+

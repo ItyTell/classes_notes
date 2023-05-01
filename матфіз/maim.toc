@@ -1,0 +1,3 @@
+\babel@toc {ukrainian}{}\relax 
+\contentsline {section}{\numberline {1}Classwork 7th of March}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}first task}{2}{subsection.1.1}%
