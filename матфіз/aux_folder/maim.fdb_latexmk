@@ -1,7 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1682191191 "c:/Users/nickk/OneDrive/Робочий стіл/Нова папка/maim.tex" "maim.pdf" "maim" 1682191195 0
-  "1.aux" 1682191195 991 de79d36e7c3eea8ed5cf4930e450a26d "pdflatex"
+["pdflatex"] 1683020399 "c:/Users/nickk/classes_notes/матфіз/maim.tex" "aux_folder/maim.pdf" "maim" 1683020402 0
   "1.tex" 1682191190 7230 57b6588f69f4fed07538e3eee13438fa ""
+  "aux_folder/1.aux" 1683020402 991 de79d36e7c3eea8ed5cf4930e450a26d "pdflatex"
+  "aux_folder/maim.aux" 1683020402 790 1e6514f9fde92dc45d6042d5471d9145 "pdflatex"
+  "aux_folder/maim.out" 1683020402 272 8b35c6ae68247d496e9e351a93d7f868 "pdflatex"
+  "aux_folder/maim.toc" 1683020402 186 00500299eabacaa12800bff168eafc1f "pdflatex"
   "c:/Games/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc" 1680001165 3141 82d5616418ed8d5de703b3951bedecb4 ""
   "c:/Games/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1680002471 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/Games/texlive/2023/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm" 1680003176 7040 b2bd27e2bfe6f6948cbc3239cae7444f ""
@@ -244,16 +247,13 @@
   "c:/Users/nickk/.texlive2023/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm" 1680010181 3240 c2435f2b5cd66d4930bc29b8df87967e ""
   "c:/Users/nickk/.texlive2023/texmf-var/fonts/tfm/lh/lh-t2a/larm1440.tfm" 1680010183 3256 3daaa33cf35cf3f354983aa3214ecd7f ""
   "c:/Users/nickk/.texlive2023/texmf-var/fonts/tfm/lh/lh-t2a/larm1728.tfm" 1680010548 3252 3140686608bdcae603a09a7973fb9e55 ""
-  "c:/Users/nickk/OneDrive/Робочий стіл/Нова папка/maim.tex" 1682090117 1330 d2fa864adc2ed46dbe638bed18b5801f ""
-  "maim.aux" 1682191195 790 1e6514f9fde92dc45d6042d5471d9145 "pdflatex"
-  "maim.out" 1682191195 272 8b35c6ae68247d496e9e351a93d7f868 "pdflatex"
-  "maim.tex" 1682090117 1330 d2fa864adc2ed46dbe638bed18b5801f ""
-  "maim.toc" 1682191195 186 00500299eabacaa12800bff168eafc1f "pdflatex"
+  "c:/Users/nickk/classes_notes/матфіз/maim.tex" 1683020395 1328 b271e9f69140cd9bdab8195da7704156 ""
+  "maim.tex" 1683020395 1328 b271e9f69140cd9bdab8195da7704156 ""
   (generated)
-  "1.aux"
-  "maim.aux"
-  "maim.log"
-  "maim.out"
-  "maim.pdf"
-  "maim.toc"
+  "aux_folder/1.aux"
+  "aux_folder/maim.aux"
+  "aux_folder/maim.log"
+  "aux_folder/maim.out"
+  "aux_folder/maim.pdf"
+  "aux_folder/maim.toc"
   (rewritten before read)
