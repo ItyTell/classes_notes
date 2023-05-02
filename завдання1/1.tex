@@ -1,0 +1,71 @@
+
+\chapter{Завдання \theHchapter}
+
+\begin{tcolorbox}[title=Завдання]
+    Нехай C — непорожня замкнена опукла пiдмножина гiльбертового простору H. Доведiть, що
+    $$ \| P_Cx - P_Cy  \|^ 2 \le
+    \| x - y \| ^ 2 - 
+    \| (x - P_Cx) - (y - P_Cy) \| ^ 2, \ \forall x, y \in H $$
+\end{tcolorbox}
+
+\center{\bfseries Розв'язання:}
+
+
+$ \| P_Cx - P_Cy  \|^ 2 = \| P_Cx - x - P_Cy + y + x - y  \|^ 2 = 
+\| x - y - ((x - P_Cx) - (y - P_Cy))  \|^ 2 = $
+
+
+$= \| x - y \| ^ 2 - 2 ( x - y,(x - P_Cx) - (y - P_Cy) ) + 
+\| (x - P_Cx) - (y - P_Cy) \| ^ 2 $
+
+
+Порівняємо з правою частиною нерівності:
+
+
+$ \cancel{\| x - y \| ^ 2} - 2 ( x - y,(x - P_Cx) - (y - P_Cy) ) + 
+\| (x - P_Cx) - (y - P_Cy) \| ^ 2 \stackrel{?}{\le} 
+\cancel{\|x - y\|^2} - \| (x - P_Cx) - (y - P_Cy) \| ^ 2 $
+
+
+
+$\|(x - P_Cx) - (y - P_Cy) \| ^ 2 \stackrel{?}{\le} 
+(x - y,(x - P_Cx) - (y - P_Cy))$
+
+
+$ \|(x - P_Cx) - (y - P_Cy) \| ^ 2 = 
+((x - P_Cx) - (y - P_Cy), (x - P_Cx) - (y - P_Cy)) =$
+
+
+$= (x - y, (x - P_Cx) - (y - P_Cy)) - (P_Cx - P_Cy, (x - P_Cx) - (y - P_Cy)) $
+
+
+$ \cancel{(x - y, (x - P_Cx) - (y - P_Cy))} - (P_Cx - P_Cy, (x - P_Cx) - (y - P_Cy)) 
+\stackrel{?}{\le} \cancel{(x - y,(x - P_Cx) - (y - P_Cy))} $
+
+
+$(P_Cx - P_Cy, (x - P_Cx) - (y - P_Cy)) \stackrel{?}{\geq} 0 $
+
+
+$(P_Cx - P_Cy, (x - P_Cx) - (y - P_Cy)) = 
+(P_Cx - P_Cy, x - y) - (P_Cx - P_Cy,  P_Cx - P_Cy) = $
+
+
+$=(P_Cx - P_Cy, x - y) - \|P_Cx - P_Cy \|^2 \stackrel{?}{\geq} 0 $
+
+
+Якщо застосувати другий пункт теореми 2 з лекції 2 
+при $1)z = P_Cx, x = x, y = P_Cy, 2)z = P_Cy, x = y, y = P_Cx $:
+
+
+Отримаємо:
+
+
+$ (P_Cx - x, P_Cy - P_Cx) \geq 0 , (P_Cy - y, P_Cx - P_C) \geq 0$
+
+
+І якщо складемо їх отримаємо нашу нерівеість:
+
+
+$(P_Cx - P_Cy, x - y) \geq \|P_Cx - P_Cy \|^2  $, що і завершує доведення.
+
+

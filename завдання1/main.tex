@@ -1,4 +1,5 @@
-\documentclass[a4paper, 14pt]{extreport}
+
+\documentclass[14pt]{extreport}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[ukrainian]{babel}
@@ -6,6 +7,7 @@
             setspace, titlesec, geometry, indentfirst, tempora, tikz, 
             pgfplots, datetime, cancel, tcolorbox}
 
+\usepackage{tempora}
 
 \pgfplotsset{width=10cm,compat=1.9}
 
@@ -57,135 +59,12 @@
 
     \tableofcontents
 
+    \include{1}
 
-    \chapter{Завдання \theHchapter}
+    \include{2}
 
-    \begin{tcolorbox}[title=Завдання]
-        Нехай C — непорожня замкнена опукла пiдмножина гiльбертового простору H. Доведiть, що
-        $$ \| P_Cx - P_Cy  \|^ 2 \le
-        \| x - y \| ^ 2 - 
-        \| (x - P_Cx) - (y - P_Cy) \| ^ 2, \ \forall x, y \in H $$
-    \end{tcolorbox}
+    \include{3}
 
-    \center{\bfseries Розв'язання:}
-
-
-    $ \| P_Cx - P_Cy  \|^ 2 = \| P_Cx - x - P_Cy + y + x - y  \|^ 2 = 
-    \| x - y - ((x - P_Cx) - (y - P_Cy))  \|^ 2 = $
-
-
-    $= \| x - y \| ^ 2 - 2 ( x - y,(x - P_Cx) - (y - P_Cy) ) + 
-    \| (x - P_Cx) - (y - P_Cy) \| ^ 2 $
-
-
-    Порівняємо з правою частиною нерівності:
-    
-    
-    $ \cancel{\| x - y \| ^ 2} - 2 ( x - y,(x - P_Cx) - (y - P_Cy) ) + 
-    \| (x - P_Cx) - (y - P_Cy) \| ^ 2 \stackrel{?}{\le} 
-    \cancel{\|x - y\|^2} - \| (x - P_Cx) - (y - P_Cy) \| ^ 2 $
-
-
-
-    $\|(x - P_Cx) - (y - P_Cy) \| ^ 2 \stackrel{?}{\le} 
-    (x - y,(x - P_Cx) - (y - P_Cy))$
-
-
-    $ \|(x - P_Cx) - (y - P_Cy) \| ^ 2 = 
-    ((x - P_Cx) - (y - P_Cy), (x - P_Cx) - (y - P_Cy)) =$
-    
-
-    $= (x - y, (x - P_Cx) - (y - P_Cy)) - (P_Cx - P_Cy, (x - P_Cx) - (y - P_Cy)) $
-
-
-    $ \cancel{(x - y, (x - P_Cx) - (y - P_Cy))} - (P_Cx - P_Cy, (x - P_Cx) - (y - P_Cy)) 
-    \stackrel{?}{\le} \cancel{(x - y,(x - P_Cx) - (y - P_Cy))} $
-
-
-    $(P_Cx - P_Cy, (x - P_Cx) - (y - P_Cy)) \stackrel{?}{\geq} 0 $
-
-
-    $(P_Cx - P_Cy, (x - P_Cx) - (y - P_Cy)) = 
-    (P_Cx - P_Cy, x - y) - (P_Cx - P_Cy,  P_Cx - P_Cy) = $
-
-
-    $=(P_Cx - P_Cy, x - y) - \|P_Cx - P_Cy \|^2 \stackrel{?}{\geq} 0 $
-
-
-    Якщо застосувати другий пункт теореми 2 з лекції 2 
-    при $1)z = P_Cx, x = x, y = P_Cy, 2)z = P_Cy, x = y, y = P_Cx $:
-
-
-    Отримаємо:
-
-
-    $ (P_Cx - x, P_Cy - P_Cx) \geq 0 , (P_Cy - y, P_Cx - P_C) \geq 0$
-
-
-    І якщо складемо їх отримаємо нашу нерівеість:
-
-
-    $(P_Cx - P_Cy, x - y) \geq \|P_Cx - P_Cy \|^2  $, що і завершує доведення.
-
-
-
-    \chapter{Завдання \theHchapter}
-
-
-    \begin{tcolorbox}[title=Завдання]
-        Нехай $\{e_n\}_{n \in \mathbf{N}} $ — злiченна ортонормована система елементiв 
-        гiльбертового простору H та
-        
-        
-        C = з.л.о. $\{e_n\}$. Доведiть, що
-        $$ P_Cx = \sum_{n = 1}^{\infty}(x, e_n)e_n, x \in H $$
-    \end{tcolorbox}
-
-    \center{\bfseries Розв'язання:}
-
-
-
-
-    \chapter{Завдання \theHchapter}
-
-
-    \begin{tcolorbox}[title=Завдання]
-        
-        Доведiть, що для гiперплощини 
-        $ L = \{y \in H : (x_0, y) = c\} (x_0 \neq 0, c \in R)$
-        проекцiя $P_Lx$ обчислюється за формулою
-        $$ P_Lx = x - ((x_0, x) - c) \frac{x_0}{\| x_0 \| ^ 2} $$
-        
-    \end{tcolorbox}
-
-    \center{\bfseries Розв'язання:}
-
-
-    \chapter{Завдання \theHchapter}
-
-
-    \begin{tcolorbox}[title=Завдання]
-        
-        Нехай C — непорожня замкнена опукла пiдмножина гiльбертового 
-        простору $ H, x \in H $ \textbackslash $C $.
-        
-        
-        Доведiть, що $ \exists p \in H$ \textbackslash $\{0\} $ такий, що
-        $$ \s (p, y) < (p, x) $$
-
-        
-    \end{tcolorbox}
-
-    \center{\bfseries Розв'язання:}
-
-
-    Покладемо $p = x - P_C x \neq 0$. Для довiльного $y \in C$ маємо
-
-
-    $0 \geq (x - P_C x, y - P_C x)=(p, y - x + p)=(p, y - x) + \|p\| ^2$.
-    
-
-    Звiдки $ \s (p, y) - (p, x) \le - \|p\| ^ 2 < 0 $,
-    що i треба було довести.
+    \include{4}
 
 \end{document}
