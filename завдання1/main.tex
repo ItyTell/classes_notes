@@ -1,11 +1,10 @@
-\documentclass[a4paper]{extreport}
+\documentclass[a4paper, 14pt]{extreport}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[ukrainian]{babel}
-\usepackage{caption, hyperref, tempora, authblk, setspace, amsmath, setspace,
-            titlesec, geometry, indentfirst, tempora, tikz, pgfplots,
-            datetime, cancel, tcolorbox}
-
+\usepackage{caption, hyperref, tempora, authblk, setspace, amsmath, 
+            setspace, titlesec, geometry, indentfirst, tempora, tikz, 
+            pgfplots, datetime, cancel, tcolorbox}
 
 
 \pgfplotsset{width=10cm,compat=1.9}
@@ -50,7 +49,7 @@
 
 \def\m{\displaystyle\min_{z \in C}}
 
-\def\k{\displaystyle<^?}
+\def\s{\displaystyle\sup_{y \in C}}
 
 \begin{document}
 
@@ -58,7 +57,6 @@
 
     \tableofcontents
 
-    \pagebreak
 
     \chapter{Завдання \theHchapter}
 
@@ -163,5 +161,31 @@
     \center{\bfseries Розв'язання:}
 
 
+    \chapter{Завдання \theHchapter}
+
+
+    \begin{tcolorbox}[title=Завдання]
+        
+        Нехай C — непорожня замкнена опукла пiдмножина гiльбертового 
+        простору $ H, x \in H $ \textbackslash $C $.
+        
+        
+        Доведiть, що $ \exists p \in H$ \textbackslash $\{0\} $ такий, що
+        $$ \s (p, y) < (p, x) $$
+
+        
+    \end{tcolorbox}
+
+    \center{\bfseries Розв'язання:}
+
+
+    Покладемо $p = x - P_C x \neq 0$. Для довiльного $y \in C$ маємо
+
+
+    $0 \geq (x - P_C x, y - P_C x)=(p, y - x + p)=(p, y - x) + \|p\| ^2$.
+    
+
+    Звiдки $ \s (p, y) - (p, x) \le - \|p\| ^ 2 < 0 $,
+    що i треба було довести.
 
 \end{document}
