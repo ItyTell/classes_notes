@@ -5,11 +5,27 @@
 \begin{tcolorbox}[title=Завдання]
     
     Нехай C — непорожня опукла пiдмножина гiльбертового 
-    простору $ H, \dim H < + \infty, x \in H $ \textbackslash $C $.
-    Доведiть, що $ \exists p \in H$ \textbackslash $\{0\} $ такий, що
-    $$ \s (p, y) < (p, x) $$
+    простору $ H, \dim H < + \infty, x \in H \backslash C $.
+    Доведiть, що $ \exists p \in H \backslash \{0\} $ такий, що
+    $$ \s (p, y) \le (p, x) $$
 
     
 \end{tcolorbox}
 
 \center{\bfseries Розв'язання:}
+
+Нехай $x \in H  \backslash C$. За теоремою Хана-Банаха про розділення, 
+існує неперервний лінійний функціонал $f: H \rightarrow R$ та дійсне число
+$\alpha$, такі що 
+
+
+$ f(y) \le \alpha < f(x), \forall y \in C $
+
+
+
+Оскільки H має скінченну розмірність, з теореми Ріса випливає, що 
+$ \exists p \in H : f(z)= (p, z), \forall z \in H $
+
+
+Тоді отримаємо: $(p, y) \le \alpha < (p, x)$.
+Отже $ \s (p, y) \le (p, x) $

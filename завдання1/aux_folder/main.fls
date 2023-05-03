@@ -1167,6 +1167,9 @@ INPUT aux_folder/4.aux
 INPUT aux_folder/5.aux
 INPUT aux_folder/5.aux
 INPUT aux_folder/5.aux
+INPUT aux_folder/6.aux
+INPUT aux_folder/6.aux
+INPUT aux_folder/6.aux
 OUTPUT aux_folder/main.aux
 INPUT c:/Games/texlive/2023/texmf-dist/tex/latex/cyrillic/ot2cmr.fd
 INPUT c:/Games/texlive/2023/texmf-dist/tex/latex/cyrillic/ot2cmr.fd
@@ -1281,6 +1284,16 @@ INPUT ./5.tex
 INPUT 5.tex
 INPUT ./5.tex
 INPUT 5.tex
+INPUT ./6.tex
+INPUT ./6.tex
+INPUT ./6.tex
+OUTPUT aux_folder/6.aux
+INPUT ./6.tex
+INPUT ./6.tex
+INPUT ./6.tex
+INPUT 6.tex
+INPUT ./6.tex
+INPUT 6.tex
 INPUT aux_folder/main.aux
 INPUT aux_folder/1.aux
 INPUT aux_folder/1.aux
@@ -1297,6 +1310,9 @@ INPUT aux_folder/4.aux
 INPUT aux_folder/5.aux
 INPUT aux_folder/5.aux
 INPUT aux_folder/5.aux
+INPUT aux_folder/6.aux
+INPUT aux_folder/6.aux
+INPUT aux_folder/6.aux
 INPUT aux_folder/main.out
 INPUT aux_folder/main.out
 INPUT c:/Games/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
