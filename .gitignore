@@ -1,3 +1,5 @@
 
+*.aux
+
 **\aux_folder\*
 !*.pdf
