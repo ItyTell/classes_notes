@@ -1,4 +1,3 @@
-
 \documentclass[14pt]{extreport}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -8,13 +7,21 @@
             pgfplots, datetime, cancel, tcolorbox}
 
 \usepackage{tempora}
-
+\usepackage{lipsum, times,etoolbox}
 \pgfplotsset{width=10cm,compat=1.9}
+
+
+\makeatletter
+% \patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\patchcmd{\@makechapterhead}{\huge}{\large}{}{}% for \chapter
+\patchcmd{\@makechapterhead}{\Huge}{\large}{}{}% for \chapter
+\patchcmd{\@makeschapterhead}{\Huge}{\large}{}{}% for \chapter*
+\makeatother
 
 \onehalfspacing
 
-\titleformat{\chapter}{\fontsize{18}{14}\bfseries\center\MakeUppercase}{}{0.5em}{}
-\titleformat{\section}{\fontsize{14}{14}\bfseries}{\thesection}{0.5em}{}
+\titleformat{\chapter}[display]{\center\LARGE\bfseries}{}{1pc}{}
+\titleformat{\section}{\bf}{\thesection}{0.5em}{}
     
 \geometry{left = 3cm, right = 1.5cm, top = 2cm, bottom = 2cm}
 \renewcommand {\baselinestretch} {1.25}
