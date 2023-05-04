@@ -5,3 +5,4 @@
 \contentsline {chapter}{\numberline {4}Завдання 4}{6}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Завдання 5}{7}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Завдання 6}{8}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Завдання 7}{9}{chapter.7}%
