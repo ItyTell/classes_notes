@@ -1,15 +1,16 @@
 \documentclass[14pt]{extreport}
-\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[ukrainian]{babel}
-\usepackage{caption, hyperref, tempora, authblk, setspace, amsmath, 
-            setspace, titlesec, geometry, indentfirst, tempora, tikz, 
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, ukrainian]{babel}
+\usepackage[babel=true]{microtype}
+\usepackage{caption, hyperref, authblk, amsmath, 
+            setspace, titlesec, geometry, indentfirst, tikz, 
             pgfplots, datetime, cancel, tcolorbox}
 
-\usepackage{tempora}
-\usepackage{lipsum, times,etoolbox}
-\pgfplotsset{width=10cm,compat=1.9}
 
+
+\usepackage{lipsum, etoolbox}
+\pgfplotsset{width=10cm,compat=1.9}
 
 \makeatletter
 % \patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
@@ -65,6 +66,7 @@
 
 
 \begin{document}
+
 
     \maketitle
 
