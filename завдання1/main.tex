@@ -1,72 +1,16 @@
-\documentclass[14pt]{extreport}
+\documentclass[a4paper, 14pt]{extreport}
+\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[T1, T2A]{fontenc}
-\usepackage[english, ukrainian]{babel}
-\usepackage[babel=true]{microtype}
-\usepackage{caption, hyperref, authblk, amsmath, 
-            setspace, titlesec, geometry, indentfirst, tikz, 
-            pgfplots, datetime, cancel, tcolorbox}
+\usepackage[ukrainian]{babel}
 
-
-
-\usepackage{lipsum, etoolbox}
-\pgfplotsset{width=10cm,compat=1.9}
-
-\makeatletter
-% \patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
-\patchcmd{\@makechapterhead}{\huge}{\large}{}{}% for \chapter
-\patchcmd{\@makechapterhead}{\Huge}{\large}{}{}% for \chapter
-\patchcmd{\@makeschapterhead}{\Huge}{\large}{}{}% for \chapter*
-\makeatother
-
-\onehalfspacing
-
-\titleformat{\chapter}[display]{\center\LARGE\bfseries}{}{1pc}{}
-\titleformat{\section}{\bf}{\thesection}{0.5em}{}
-    
-\geometry{left = 3cm, right = 1.5cm, top = 2cm, bottom = 2cm}
-\renewcommand {\baselinestretch} {1.25}
-
-\setlength{\parindent}{3em}
-\usetikzlibrary{positioning}
-
-\hypersetup{
-    colorlinks=true,
-    linkcolor=orange,
-    filecolor=magenta,      
-    urlcolor=red,
-    pdftitle={Math-Phusics},
-}
-
-\urlstyle{same}
-
+\input{packages}
+\input{config.tex}
 
 \title{Завдання 1 з премету Спецкурс для ОМ-3}
 \author{Коломієць Микола}
 \date{\today}
-\renewcommand{\familydefault}{phv}
-
-\tcbset{
-        colback=red!5!white,colframe=red!50!black,
-        fontlower=\spacing{0}\linespread{3000.8}\sffamily\bfserie,
-        code={\doublespacing}
-        }
-
-
-
-
-\def\m{\displaystyle\min_{z \in C}}
-
-\def\s{\displaystyle\sup_{y \in C}}
-
-
-\def\i{\displaystyle\inf_{x \in D}}
-
-\def\ifn{\displaystyle\inf_}
-
 
 \begin{document}
-
 
     \maketitle
 
@@ -91,6 +35,5 @@
     \include{9}
 
     \include{10}
-
 
 \end{document}
