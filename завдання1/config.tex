@@ -3,7 +3,11 @@
 \onehalfspacing
 
 
-\titleformat{\chapter}[display]{\center\LARGE\bfseries}{}{1pc}{}
+\titleformat{\chapter}[display]
+{\center\LARGE\bfseries}{}{0pt}{}
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+
 \titleformat{\section}{\bf}{\thesection}{0.5em}{}
     
 \geometry{left = 3cm, right = 1.5cm, top = 2cm, bottom = 2cm}
@@ -26,6 +30,8 @@
         fontlower=\spacing{0}\linespread{3000.8}\sffamily\bfserie,
         code={\doublespacing}
 }
+
+
 
 
 % comands
