@@ -4,12 +4,14 @@
 
 
 \begin{tcolorbox}[title=Завдання]
-    Нехай $C_1 \subseteq C_2 \subseteq ...$ — незростаюча послiдовнiсть
+    Нехай $C_1 \supseteq C_2 \supseteq ...$ — незростаюча послiдовнiсть
     опуклих замкнених множин гiльбертового простору.
     
     
-    Припустимо що $ \bigcap\limits_{n=1}^{\infty}C_n \neq \emptyset $ 
+    Припустимо що $ C = \bigcap\limits_{n=1}^{\infty}C_n \neq \emptyset $ 
     і нехай $ x \in H $.
+    
+    
     Доведіть, що
     $P_{C_n} x \rightarrow P_Cx$.
     
@@ -19,3 +21,12 @@
 
 
 \center{\bfseries Розв'язання:}
+
+$C_1 \supseteq C_2 \supseteq ... \Rightarrow
+C = \lim\limits_{n \rightarrow\infty}C_n, $ 
+$ P_Cx \in C \Rightarrow \exists N \in N, \forall n > N 
+P_Cx \in C_n \Rightarrow P_Cx = P_{C_n}x 
+\Rightarrow P_{C_n}x \rightarrow P_Cx$
+
+
+Доведено
