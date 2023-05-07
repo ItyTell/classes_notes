@@ -16,3 +16,47 @@
 
 
 \center{\bfseries Розв'язання:}
+
+З визначення множна $C$ замкнена і опукла. Тоді можемо визначити проекції
+
+
+$ \|P_Cx - x\| = \min\limits_{y \in C} \|y - x\|, \quad $
+$ \|P_{C_n}x - x\| = \min\limits_{y_n \in C_n} \|y_n - x\| $
+
+
+Нехай $y^{min} = y = P_Cx, y_n^{min} = y_n = P_{C_n}x$.
+
+
+Треба довести, що $\forall x \in H, y_n \rightarrow y$.
+
+
+З умови $C_1 \subseteq C_2 \subseteq ...$ випливаєб що
+$cl (\bigcup\limits_{n=1}^{\infty} C_n) = 
+cl(\lim\limits_{n \rightarrow \infty}C_n) $
+Тоді, якщо $ \exists N \in N, \forall n > N, y \in C_n, y_n = y$
+і твердження є очевидним.
+
+
+Нехай $\nexists N \in N, \forall n > N, y \in C_n$ 
+Тоді $\exists N \in N, \forall n > N,
+y \in cl(C_n) \backslash C_n$
+
+
+А отже $\exists y_n^1 \in C_n, y_n^1 \rightarrow y$ 
+Тоді $\forall x \in H \|y_n^1 - x\| \rightarrow \|y - x\|$ 
+
+
+При цьому $\|y - x\| < \|z - x\|, \forall z \in C $
+і $ \|y_n - x\| < \|z_n - x\|, \forall z_n \in C_n $
+
+
+А отже $ \|y_n - x\| \le \|y_n^1 - x\| $
+
+
+$C_n \subseteq C \Rightarrow \|y - x\| \le \|z - x\|, 
+\forall z \in C_n, n=1..\infty$
+
+Отже 
+$\|y - x\| \le  \|y_n - x\| \le \|y_n^1 - x\| 
+\Rightarrow y_n \rightarrow y$ за теоремою прополіцаїв. 
+Доведено
