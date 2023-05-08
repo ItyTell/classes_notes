@@ -9,3 +9,50 @@
 
 \center{\bfseries Розв'язання:}
 
+
+Біном Ньютона
+
+
+$ 1^n = (1 - x + x)^n = \sum\limits_{k=0}^{n}C_n^kx^k(1 - x)^{n - k} $
+
+
+Позначимо за $f(x) = \sum\limits_{k=0}^{n}C_n^kx^k(1 - x)^{n - k} = 1$
+
+
+Тоді $\frac{df(x)}{dx} = 
+\sum\limits_{k=0}^{n}kC_n^kx^{k-1}(1 - x)^{n - k} - 
+\sum\limits_{k=0}^{n}(n - k)C_n^kx^k(1 - x)^{n - k - 1} = 0$
+
+
+$ 
+\sum\limits_{k=0}^{n}kC_n^kx^{k-1}(1 - x)^{n - k - 1} -
+\cancel{\sum\limits_{k=0}^{n}kC_n^kx^{k}(1 - x)^{n - k - 1}} -$
+
+
+$-\sum\limits_{k=0}^{n}nC_n^kx^k(1 - x)^{n - k - 1} + 
+\cancel{\sum\limits_{k=0}^{n}kC_n^kx^k(1 - x)^{n - k - 1}} = 0$
+
+
+$
+\sum\limits_{k=0}^{n}kC_n^kx^{k-1}(1 - x)^{n - k - 1} -
+\sum\limits_{k=0}^{n}nC_n^kx^k(1 - x)^{n - k - 1} = 0$ 
+
+
+$\sum\limits_{k=0}^{n}(k - nx)C_n^kx^{k-1}(1 - x)^{n - k - 1} = 0  $
+
+
+
+$\sum\limits_{k=0}^{n}(\frac{k}{n} - x)
+C_n^kx^{k-1}(1 - x)^{n - k - 1} =  
+\sum\limits_{k=0}^{n}(\frac{k}{n} - x)
+C_n^kx^{k}(1 - x)^{n - k} = 0  $
+
+
+$ \sum\limits_{k=0}^{n}(\frac{k}{n} - x)^2 C_n^kx^k(1-x)^{n-k} = 
+\sum\limits_{k=0}^{n}\frac{k}{n}(\frac{k}{n} - x) C_n^kx^k(1-x)^{n-k} - 
+x\underbrace{\sum\limits_{k=0}^{n}(\frac{k}{n} - x) C_n^kx^k(1-x)^{n-k}}_{\mbox{0}} = $
+
+
+$=\frac{1}{n}\sum\limits_{k=0}^{n}k(\frac{k}{n} - x) C_n^kx^k(1-x)^{n-k} = 
+\frac{1}{n}(\sum\limits_{k=0}^{n}\frac{k^2}{n} C_n^kx^k(1-x)^{n-k} - 
+\sum\limits_{k=0}^{n}kxC_n^kx^k(1-x)^{n-k})$
