@@ -42,11 +42,51 @@ $\sum\limits_{k=0}^{n}(k - nx)C_n^kx^{k-1}(1 - x)^{n - k - 1} = 0  $
 
 
 
-$\sum\limits_{k=0}^{n}(\frac{k}{n} - x)
-C_n^kx^{k-1}(1 - x)^{n - k - 1} =  
-\sum\limits_{k=0}^{n}(\frac{k}{n} - x)
-C_n^kx^{k}(1 - x)^{n - k} = 0  $
+$\sum\limits_{k=0}^{n}\frac{k}{n}
+C_n^kx^{k}(1 - x)^{n - k} =  
+\sum\limits_{k=0}^{n}x
+C_n^kx^{k}(1 - x)^{n - k} =
+x$
 
+
+\newpage
+$\frac{d^2f(x)}{dx^2} = 
+\sum\limits_{k=0}^{n}C_n^kx^{k - 2}(1 - x)^{(n - k -2)}(
+    k(k - 1)(1 - x)^2 - 2 k (n - k) x (1 - x) +
+    (n - k)(n - k - 1) x^2)=$
+
+
+$
+=\sum\limits_{k=0}^{n}C_n^kx^{k - 2}(1 - x)^{(n - k -2)}(
+    k^2 - k - \cancel{2xk^2} + 2xk + \cancel{x^2k^2} - \cancel{kx^2} -
+    2knx + \cancel{2knx^2} + \cancel{2k^2x} - \cancel{2k^2x^2} +
+    n^2x^2 - \cancel{nkx^2} - nx^2 - \cancel{knx^2} + 
+    \cancel{k^2x^2} + \cancel{kx^2}
+)=
+$
+
+
+$
+=\sum\limits_{k=0}^{n}C_n^kx^{k - 2}(1 - x)^{(n - k -2)}(
+    k^2 - k + 2kx - 2knx - 2 k^2 x^2 + n^2x^2 - nx^2
+)
+$
+
+
+$
+\sum\limits_{k=0}^{n}C_n^kx^{k - 2}(1 - x)^{(n - k -2)}k^2=
+nx -2nx^2 +2 n^2x^2 - n^2x^2 + nx^2
+$
+
+
+
+$
+\frac{1}{n}\sum\limits_{k=0}^{n}C_n^kx^{k - 2}(1 - x)^{(n - k -2)}k^2=
+x - x^2 + nx^2
+$
+
+
+\newpage
 
 $ \sum\limits_{k=0}^{n}(\frac{k}{n} - x)^2 C_n^kx^k(1-x)^{n-k} = 
 \sum\limits_{k=0}^{n}\frac{k}{n}(\frac{k}{n} - x) C_n^kx^k(1-x)^{n-k} - 
@@ -55,4 +95,11 @@ x\underbrace{\sum\limits_{k=0}^{n}(\frac{k}{n} - x) C_n^kx^k(1-x)^{n-k}}_{\mbox{
 
 $=\frac{1}{n}\sum\limits_{k=0}^{n}k(\frac{k}{n} - x) C_n^kx^k(1-x)^{n-k} = 
 \frac{1}{n}(\sum\limits_{k=0}^{n}\frac{k^2}{n} C_n^kx^k(1-x)^{n-k} - 
-\sum\limits_{k=0}^{n}kxC_n^kx^k(1-x)^{n-k})$
+\sum\limits_{k=0}^{n}kxC_n^kx^k(1-x)^{n-k})=$
+
+
+$=\frac{1}{n}\sum\limits_{k=0}^{n}\frac{k^2}{n} C_n^kx^k(1-x)^{n-k} - 
+x^2 = \frac{x - x^2 +nx^2}{n} - x^2 =\frac{x - x^2}{n}$
+
+
+Доведено!

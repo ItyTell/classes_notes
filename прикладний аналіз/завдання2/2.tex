@@ -8,4 +8,21 @@
 
 \center{\bfseries Розв'язання:}
 
+$ 1 = \sum\limits_{k=0}^{n}C_n^kx^k(1 - x)^{n - k} $,
+нехай $f$ зростаюча на $[0, 1]$ функція і $\forall x_1, x_2 \in [0, 1],
+x_1 > x_2 \Rightarrow f(x_1) > f(x_2)$
 
+
+$ B_n = \sum\limits_{k=0}^{n}f(\frac{k}{n})C_n^kx^k(1 - x)^{n - k} $
+
+
+$ B_n' = \sum\limits_{k=0}^{n}kf(\frac{k}{n})C_n^kx^{k - 1}(1 - x)^{n - k}-
+\sum\limits_{k=0}^{n}(n - k)f(\frac{k}{n})C_n^kx^k(1 - x)^{n - k - 1}=$
+
+
+$=\sum\limits_{k=0}^{n}f(\frac{k}{n})C_n^kx^{k - 1}(1 - x)^{n - k - 1}
+    (k(1 - x) - (n - k)x) =$
+
+
+$=\sum\limits_{k=0}^{n}f(\frac{k}{n})C_n^kx^{k - 1}(1 - x)^{n - k - 1}
+    (k + nx) > 0$, при $f(x) \geq 0, x \in [0, 1]$
