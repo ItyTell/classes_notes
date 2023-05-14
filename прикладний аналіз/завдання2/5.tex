@@ -11,3 +11,65 @@
 \end{tcolorbox}
 
 \center{\bfseries Розв'язання:}
+
+
+Якщо $\| B_n - f\|$ збігається до нуля то рівномірна збіжність очевидна.
+
+
+$\| B_n - f\| = \| \sum\limits_{k=0}^n \sum\limits_{i=0}^n 
+f(\frac{k}{n}, \frac{i}{n}) 
+C_n^k C_n^i x^k y^i(1-x)^{n-k}(1-y)^{n-i}  
+- \sum\limits_{k=0}^n \sum\limits_{i=0}^nf(x, y) 
+C_n^k C_n^i x^k y^i(1-x)^{n-k}(1-y)^{n-i} \|=$
+
+
+$=\sum\limits_{k=0}^n \sum\limits_{i=0}^n 
+\| f(\frac{k}{n}, \frac{i}{n}) - f(x, y) \|
+C_n^k C_n^i x^k y^i(1-x)^{n-k}(1-y)^{n-i} 
+$
+
+Нехай $\epsilon > 0$ задано. 
+За теоремою Кантора інсують $\delta_1, \delta_2$
+такі, що для $ x', x'', y', y''\in [0, 1], \quad
+|x' - x''| < \delta_1, |y' - y''| < \delta_2  \Rightarrow 
+|f(x', y') - f(x'', y'')| < \epsilon $
+
+
+$\sum\limits_{k=0}^n \sum\limits_{i=0}^n 
+\| f(\frac{k}{n}, \frac{i}{n}) - f(x, y) \|
+C_n^k C_n^i x^k y^i(1-x)^{n-k}(1-y)^{n-i}=$
+
+
+$=
+\sum\limits_{|x' - x''| < \delta_1 \land}
+\sum\limits_{|y' - y''| < \delta_2} \| 
+f(\frac{k}{n}, \frac{i}{n}) - f(x, y) \|
+C_n^k C_n^i x^k y^i(1-x)^{n-k}(1-y)^{n-i}+$
+
+
+$+ 
+\sum\limits_{|x' - x''| > \delta_1 \lor}
+\sum\limits_{|y' - y''| > \delta_2} \|
+f(\frac{k}{n}, \frac{i}{n}) - f(x, y) \|
+C_n^k C_n^i x^k y^i(1-x)^{n-k}(1-y)^{n-i} \le$
+
+
+$\le \frac{\epsilon}{2} + \frac{2\| f \|_{\infty}}{\sigma_1^2\sigma_2^2}
+\sum\limits_{k = 0}^n (x - \frac{k}{n})^2 (y - \frac{i}{n})^2
+C_n^kC_n^ix^ky^i(1-x)^{n - k}(1-y)^{n-i}  = $
+
+
+$ =  \frac{\epsilon}{2} + \frac{2\| f \|_{\infty}}{\sigma_1^2\sigma_2^2}
+\frac{x(1 - x)y(1 - y)}{n} = \frac{\epsilon}{2} + 
+\frac{\|f\|_{\infty}}{2n\sigma_1^2\sigma_2^2}$
+
+
+Далі обераємо таке $N, \forall n > N, 
+\frac{\|f\|_{\infty}}{2n\sigma_1^2\sigma_2^2} < \frac{\epsilon}{2}$
+
+
+Тоді має місце рівність $\forall \epsilon > 0: 
+\|B_n - f\| < \epsilon$
+
+
+Доведено!
