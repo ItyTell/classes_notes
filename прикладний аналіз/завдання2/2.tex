@@ -14,22 +14,28 @@
 $ B_n = \sum\limits_{k=0}^{n}f(\frac{k}{n})C_n^kx^k(1 - x)^{n - k} $
 
 
-
-$1 = \sum\limits_{k=0}^{n}C_n^kx^k(1 - x)^{n - k} $, отже при розкриті дужок
-$x^k$ завжди скорочується. 
-Позначимо коефіцієнт при $x^k$
-які були в перших $[n/2]$ доданках $p_{k, 1}$,
-і відповідно коефіцієнт $p_{k, 2}$ при всіх інших доданках.
-тоді очевидно, що для 
-$\forall k \in N, k \le n, p_{k, 1} - p_{k, 2} = 0, $
-
-
 Тоді 
 
 $ B_n = \sum\limits_{k=0}^{n}f(\frac{k}{n})C_n^kx^k(1 - x)^{n - k} = 
 \sum\limits_{k=0}^{n}f(\frac{k}{n})C_n^kx^k
 \sum\limits_{l=0}^{n - k}C_l^{n-k}(-1)^l x^l = 
 =\sum\limits_{k=0}^{n}\sum\limits_{l=0}^{n - k}
-C_l^{n-k}(-1)^l f(\frac{k}{n})C_n^k x^{k+l}
-=\sum\limits_{k=0}^{n}\sum\limits_{l=0}^{n - k}
-\frac{(n-k)! n!}{l! (n - k -l)! (n - k)! k!}(-1)^l f(\frac{k}{n})x^{k+l} $
+C_l^{n-k}(-1)^l f(\frac{k}{n})C_n^k x^{k+l}$
+
+
+$\sum\limits_{k=0}^{n}\sum\limits_{l=0}^{n - k} =
+\sum\limits_{k=0}^{n}\sum\limits_{l=0}^{k},
+C_n^k C_{n - k}^l = C_n^k C_k^l$
+
+
+Тоді 
+$\sum\limits_{k=0}^{n}\sum\limits_{l=0}^{n - k}
+C_l^{n-k}(-1)^l f(\frac{k}{n})C_n^k x^{k+l} = 
+\sum\limits_{k=0}^{n}C_n^k \Delta^k f(0) x^k$
+
+
+Очевидно при зростаючій $f$, $\Delta^k f(0) > 0$, отже це поліном з 
+додатніми коефіцієнтами - зростаюча функція. 
+
+
+Доведено!
