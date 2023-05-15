@@ -3,8 +3,34 @@
 
 \begin{tcolorbox}[title=Завдання]
     Нехай функція $f \in C([0,1])$ така, що 
-    $\int_0^1 f(x) x^n d x=0, n=0,1,2, \ldots$ 
+    $\int\limits_0^1 f(x) x^n d x=0, n=0,1,2, \ldots$ 
     Доведіть, що $f(x)=0$ на $[0,1]$.
 \end{tcolorbox}
 
 \center{\bfseries Розв'язання:}
+
+
+$\int\limits_0^1 f(x) x^n d x=0 = \lim\limits_{p\rightarrow \infty}
+\int\limits_0^1 \sum\limits_{k = 0}^p 
+f(\frac{k}{p})C_p^kx^{k+n}(1 - x)^{p - k}=$
+
+
+$=
+\lim\limits_{p\rightarrow \infty}
+\sum\limits_{k = 0}^p f(\frac{k}{p})C_p^k
+\int\limits_0^1 x^{k+n}(1 - x)^{p - k}=
+0, n = 0, 1, 2,\dots 
+$ 
+
+
+$
+x(1 - x) \geq 0, \forall x \in [0, 1], \Rightarrow
+\forall k, n \in \mathbb{N}, n \geq k \quad f(\frac{k}{n}) = 0
+$
+
+
+Отже $f(x) = 0$ на $x \in [0, 1]\cap \mathbb{Q}$,
+\quad $f \in C  \Rightarrow f(x) = 0, x \in [0, 1]$  
+
+
+Доведено!
