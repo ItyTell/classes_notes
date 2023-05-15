@@ -21,11 +21,37 @@ $|f(x) - B_n(f,x)|=
 $|f(x) - f(\frac{k}{n})| \le L |x - \frac{k}{n}|$
 
 
-$ \max \sum\limits_{k=0}^{n}|f(x) - f(\frac{k}{n})| \le
-\max \sum\limits_{k=0}^{n}|x - \frac{k}{n}| = 
-\max nx - n\sum\limits_{k=0}^{n}k$
+Нехай $\varepsilon > 0$ задано. 
+За теоремою Кантора iснує $\sigma > 0$ таке, що для
 
 
-$\sum\limits_{k=0}^{n}|f(x) - f(\frac{k}{n})|C_n^kx^k(1-x)^{n-k} \le 
-\sum\limits_{k=0}^{n}L\frac{k}{n}C_n^kx^k(1-x)^{n-k}$
+$x', x'' \in [0, 1] \quad |x' - x''| < \sigma \Rightarrow 
+|f(x') - f(x'')| < \frac{\varepsilon}{2}$
+
+
+$\sum\limits_{k=0}^{n}|f(x) - f(\frac{k}{n})|C_n^kx^k(1-x)^{n-k} < $
+
+
+$<\sum\limits_{|x - \frac{k}{n}|<\sigma}
+|f(x) - f(\frac{k}{n})|C_n^kx^k(1-x)^{n-k} + 
+\sum\limits_{|x - \frac{k}{n}|>\sigma}
+|f(x) - f(\frac{k}{n})|C_n^kx^k(1-x)^{n-k} =$
+
+
+
+$= \frac{\varepsilon}{2} + 
+L\sum\limits_{|x - \frac{k}{n}|>\sigma}
+|x - \frac{k}{n}|C_n^kx^k(1-x)^{n-k}$
+
+
+За допомогою оцінки, що ми використовували у доведені теореми Веєрштраса 
+отримуємо
+
+
+$|f(x) - B_n(f, x)| < \frac{\varepsilon}{2} + \frac{L}{2\sqrt{n}}$
+Для довільного $\varepsilon > 0$. Це і завершає доведення.
+
+
+Доведено!
+
 
