@@ -11,3 +11,85 @@
 \end{tcolorbox}
 
 \center{\bfseries Розв'язання:}
+
+
+Підставляючи коефіцієнти Фур'є у формули для 
+часткових сум одержуються загальні формули:
+
+$s_n(x)=\sum\limits_{k=-n}^n(\frac{1}{2 \pi} \int\limits_{-\pi}^\pi 
+f(t) e^{-i k t}d t) e^{i k x}=\frac{1}{2 \pi} \int\limits_{-\pi}^\pi 
+f(t) \sum\limits_{k=-n}^n e^{i k(x-t)} d t=$
+
+
+$=\frac{1}{2 \pi} \int\limits_{-\pi}^\pi f(t) D_n(x-t) dt$
+
+
+Після заміни змінних можна також написати
+
+
+$$s_n(x)=\frac{1}{2 \pi} \int\limits_{-\pi}^\pi f(x-t) D_n(t) d t$$
+
+
+де $D_n(t)$ позначає відповідне ядро Діріхле.
+Тоді також
+
+
+$$\sigma_n(x)=\frac{1}{n+1} \sum\limits_{k=0}^n s_k(x)=\frac{1}{2 \pi} 
+\int\limits_{-\pi}^\pi f(x-t)(\frac{1}{n+1} \sum\limits_{k=0}^n D_n(t)) 
+d t=\frac{1}{2 \pi} \int\limits_{-\pi}^\pi f(x-t) F_n(t) d t$$
+
+
+де $F_n(t)$ позначає відповідне ядро феєра.
+Далі, враховуючи, що для всіх ядер Феєра 
+$\frac{1}{2 \pi} \int\limits_{-\pi}^\pi F_n(t) d t=1$, також можна записати
+
+
+$$\sigma_n(x)-f(x)=\frac{1}{2 \pi} 
+\int\limits_{-\pi}^\pi(f(x-t)-f(x)) F_n(t) d t$$
+
+
+Оскільки ядро Феєра є невід'ємною функцією, то звідси:
+
+
+$$|\sigma_n(x)-f(x)| \leqslant \frac{1}{2 \pi} 
+\int\limits_{-\pi}^\pi|f(x-t)-f(x)| F_n(t) d t$$
+
+
+Оскільки $f \epsilon$ неперервною на проміжку $[-\pi, \pi]$, то вона $€$ 
+на ньому рівномірно неперервною, тобто для кожного $\varepsilon>0$ існує 
+$\delta>0$ таке, що для всіх $|x-y| \leqslant \delta
+|f(x)-(y)|<\varepsilon / 2$. 
+Інтеграл із останньої рівності можна записати як суму 
+$\frac{1}{2 \pi} \int\limits_{-\pi}^\pi
+|f(x-t)-f(x)| F_n(t) d t=I_1+I_2$, де:
+
+
+$$I_1=\frac{1}{2 \pi} \int\limits_{|t| \leqslant \delta}
+|f(x-t)-f(x)| F_n(t) d t$$
+
+
+$$I_2=\frac{1}{2 \pi} \int\limits_{\pi \geqslant|t| \geqslant \delta}
+|f(x-t)-f(x)| F_n(t) d t$$
+
+
+Через рівномірну неперервність функції $f$ і знову використавши рівність $\frac{1}{2 \pi} \int_{-\pi}^\pi F_n(t) d t=1$, для першого інтегралу
+$$
+I_1<\frac{1}{2 \pi} \int_{|t| \leqslant \delta} \varepsilon F_n(t) d t=\varepsilon
+$$
+Для другого інтегралу, якщо позначити $M=\sup _{x \in[-\pi, \pi]}|f(x)|$, то
+$$
+I_2 \leqslant \frac{1}{2 \pi} \int_{\pi \geqslant|t| \geqslant \delta} 2 M F_n(t) d t=\frac{M}{\pi} \int_{\pi \geqslant|t| \geqslant \delta} F_n(t) d t
+$$
+Згідно властивостей ядра Феєра останній вираз прямує до нуля для великих $n$, тобто для достатньо великих $n$ :
+$$
+I_2 \leqslant \frac{M}{\pi} \int_{\pi \geqslant|t| \geqslant \delta} F_n(t) d t<\varepsilon / 2
+$$
+Остаточно у цьому випадку
+$$
+\left|\sigma_n(x)-f(x)\right| \leqslant \frac{1}{2 \pi} \int_{-\pi}^\pi|f(x-t)-f(x)| F_n(t) d t=I_1+I_2<\varepsilon / 2+\varepsilon / 2=\varepsilon .
+$$
+Тобто $\sigma_n(x)$ прямує до $f(x)$ і крім того збіжність є рівномірною оскільки індекс $n$ у доведенні вище був обраний єдиним для всіх $x$.
+
+
+Доведено!
+

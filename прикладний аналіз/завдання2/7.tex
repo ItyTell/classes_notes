@@ -4,9 +4,56 @@
 \begin{tcolorbox}[title=Завдання]
     Нехай $f \in C([0,1])$. Знайти границю
     $$\lim_{n\rightarrow \infty}
-    \underbrace{\int_{0}^{1}\int_{0}^{1}\dots\int_{0}^{1}}_{\mbox{n}}
+    \underbrace{\int\limits_{0}^{1}\int\limits_{0}^{1}
+    \dots\int\limits_{0}^{1}}_{\mbox{n}}
     f(x_1, x_2 \dots x_n) dx_1dx_2\dots dx_n $$
 \end{tcolorbox}
 
 \center{\bfseries Розв'язання:}
 
+
+$
+\lim\limits_{n\rightarrow \infty}
+\underbrace{\int_{0}^{1}\int\limits_{0}^{1}
+\dots\int\limits_{0}^{1}}_{\mbox{n}}
+f(x_1, x_2 \dots x_n) dx_1dx_2\dots dx_n=$
+
+
+$=
+\lim\limits_{n\rightarrow \infty}
+\underbrace{\int\limits_{0}^{1}\int\limits_{0}^{1}
+\dots\int\limits_{0}^{1}}_{\mbox{n}}
+\lim\limits_{p\rightarrow \infty}
+\sum\limits_{k = 0}^{p}
+\sum\limits_{i = 0}^{p}
+\dots
+\sum\limits_{l = 0}^{p}
+f(\frac{k}{n}, \frac{i}{p} \dots \frac{l}{p}) 
+x_1^k(1- x_1)^{p - k}
+x_2^i(1- x_2)^{p - i}
+\dots
+x_n^l(1- x_n)^{p - l}
+dx_1dx_2\dots dx_n = 
+$
+
+
+$
+\lim\limits_{n\rightarrow \infty}
+\lim\limits_{p\rightarrow \infty}
+f(\frac{k}{p}, \frac{i}{p}, \dots, \frac{l}{p})$
+
+
+$
+\sum\limits_{k = 0}^{p}\int\limits_{0}^{1}x_1^k(1- x_1)^{p - k}dx_1
+\sum\limits_{i = 0}^{p}\int\limits_{0}^{1}x_2^i(1- x_2)^{p - i}dx_2
+\dots
+\sum\limits_{l = 0}^{p}\int\limits_{0}^{1}x_n^l(1- x_n)^{p - l}dx_n
+$
+Інтеграли однакові Отже
+
+
+$ 
+\lim\limits_{n\rightarrow \infty}
+\lim\limits_{p\rightarrow \infty}
+(\sum\limits_{k = 0}^{p}\int\limits_{0}^{1}x_1^k(1- x_1)^{p - k}dx_1)^n
+$
