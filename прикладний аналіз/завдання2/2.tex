@@ -11,31 +11,79 @@
 нехай $f$ зростаюча на $[0, 1]$ функція 
 
 
-$ B_n = \sum\limits_{k=0}^{n}f(\frac{k}{n})C_n^kx^k(1 - x)^{n - k} $
+$B_{n +k}(f, x) = \sum\limits_{r = 0}^{n+k}f(\frac{r}{n+k})
+C_{n+k}^r x^r(1 - x)^{n+k-r}$
 
 
-Тоді 
-
-$ B_n = \sum\limits_{k=0}^{n}f(\frac{k}{n})C_n^kx^k(1 - x)^{n - k} = 
-\sum\limits_{k=0}^{n}f(\frac{k}{n})C_n^kx^k
-\sum\limits_{l=0}^{n - k}C_l^{n-k}(-1)^l x^l = 
-=\sum\limits_{k=0}^{n}\sum\limits_{l=0}^{n - k}
-C_l^{n-k}(-1)^l f(\frac{k}{n})C_n^k x^{k+l}$
+Запишемо загальний вигляд k-ї похідної
 
 
-$\sum\limits_{k=0}^{n}\sum\limits_{l=0}^{n - k} =
-\sum\limits_{k=0}^{n}\sum\limits_{l=0}^{k},
-C_n^k C_{n - k}^l = C_n^k C_k^l$
+$B_{n +k}^{(k)}(f, x) = \sum\limits_{r = 0}^{n+k}
+f(\frac{r}{n+k})C_{n+k}^r p(x),
+\quad p(x) = \frac{d^k}{dx^k}x^r(1 - x)^{n + k -r}$
 
 
-Тоді 
-$\sum\limits_{k=0}^{n}\sum\limits_{l=0}^{n - k}
-C_l^{n-k}(-1)^l f(\frac{k}{n})C_n^k x^{k+l} = 
-\sum\limits_{k=0}^{n}C_n^k \Delta^k f(0) x^k$
+За правилом Лейбніца 
 
 
-Очевидно при зростаючій $f$, $\Delta^k f(0) > 0$, отже це поліном з 
-додатніми коефіцієнтами - зростаюча функція. 
+$$
+\cfrac{d^s}{dx^s} \ x^r = 
+\begin{cases}
+    \frac{r!}{(r-s)!}x^{r-s}, r - s \geq 0 \\
+    0, r-s < 0    
+\end{cases}
+$$ 
+$$
+\qquad
+\cfrac{d^{k - s}}{dx^{k -s}} \ (1 - x)^{n+k-r} = 
+\begin{cases}
+    (-1)^{k + s}\frac{(n+k-r)!}{(n+s-r)!}(1 - x)^{n+s-r}, r - s \le n \\
+    0, r-s > n    
+\end{cases}
+$$
+
+\newpage
+Тоді отримаємо формулу
+
+
+$$
+p(s) = \sum\limits_s (-1)^{k-s} C_k^s \frac{r!(n+k-r)!}{(r-s)!(n+s-r)!}
+x^{r-s}(1-x)^{n+s-r}
+$$
+
+
+Після заміни індексів $t = r-s$ можна перетворити суми
+$
+\sum\limits_{r=0}^{n+k}\sum\limits_{s} = 
+\sum\limits_{t=0}^{n}\sum\limits_{s=0}^{k}$.
+
+
+Використавши допоміжну теорему з курсу функціонального аналізу отримаємо
+
+
+$$
+B_{n+k}^{(k)}=\frac{(n+k) !}{n !} \sum_{r=0}^n \Delta^k f\left(\frac{r}{n+k}\right)\left(\begin{array}{c}
+n \\
+r
+\end{array}\right) x^r(1-x)^{n-r}
+$$
+(крок $\Delta = \frac{1}{n+k}$ )
+
+
+В нашому випадку $k = 1$
+
+
+$$ B_{n +1}^{(1)} = \frac{(n+1) !}{n !} \sum_{r=0}^n \Delta f
+\left(\frac{r}{n+1}\right)
+\left
+(\begin{array}{c}n \\
+r
+\end{array}
+\right) x^r(1-x)^{n-r} $$
+
+
+$\Delta f$ додатня атже функцiя зростаюча, отже всі множники додатні і 
+похідна також $\Rightarrow$ поліном зростає.
 
 
 Доведено!
