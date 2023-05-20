@@ -1,0 +1,91 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+
+\title{Завдання 3. Навколо теорем Брауера та Какутані }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+  \item Нехай $A_{1}, A_{2}, A_{3}$ - набір замкнених підмножин трикутника $\Delta \subseteq \mathbb{R}^{2}$ з вершинами $v_{1}, v_{2}$ та $v_{3}$. Нехай:
+\end{enumerate}
+
+\begin{enumerate}
+  \item $\Delta=\bigcup_{k=1}^{3} A_{k}$;
+
+  \item $\forall k \in\{1,2,3\}: v_{k} \in A_{k}$;
+
+  \item $\forall k, i \in\{1,2,3\}:\left[v_{k}, v_{i}\right] \subseteq A_{k} \cup A_{i}$.
+
+\end{enumerate}
+
+Доведіть, що $\bigcap_{k=1}^{3} A_{k} \neq \emptyset$.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item Доведіть, що всі опуклі компакти з непорожньою внутрішністю в $\mathbb{R}^{n}$ гомеоморфні.
+
+  \item Нехай $A \subseteq B^{n}$ - непорожня замкнена множина. Доведіть, що існує неперервне відображення $T: B^{n} \rightarrow B^{n}$ таке, що $F(T)=A$, де $F(T)-$ множина нерухомих точок відображення $T$.
+
+  \item Нехай неперервне відображення $f: B^{n} \rightarrow \mathbb{R}^{n}$ має властивість:
+
+\end{enumerate}
+
+$$
+(f(x), x) \geq 0 \quad \forall x \in S^{n-1} .
+$$
+
+Доведіть, що існує точка $x_{0} \in B^{n}: f\left(x_{0}\right)=0$.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item Нехай неперервне відображення $f: B^{n} \rightarrow \mathbb{R}^{n}$ має властивість:
+\end{enumerate}
+
+$$
+f\left(S^{n-1}\right) \subseteq B^{n}
+$$
+
+Доведіть, що існує точка $x_{0} \in B^{n}: f\left(x_{0}\right)=x_{0}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item В банахових просторах $\ell_{2}, c_{0}$ та $C([-1,1])$ побудувати приклади неперервних відображень, що відображають замкнену кулю в себе, але не мають нерухомих точок.
+
+  \item Нехай $H$ - нескінченновимірний гільбертовий простір. Доведіть, що оператор проектування на замкнену кулю не є слабко неперервним.
+
+  \item Нехай $\left(X, d_{X}\right),\left(Y, d_{Y}\right)-$ метричні простори, $\left(Y, d_{Y}\right)-$ компактний простір. Нехай $f \in$ $C(X \times Y)$ та $g(x)=\max _{y \in Y} f(x, y)$. Доведіть, що $g \in C(X)$.
+
+  \item Нехай функція $\phi: X \times Y \rightarrow \mathbb{R}$ неперервна, $Y-$ компакт. Доведіть, що відображення $T: X \rightarrow 2^{Y}$, задане співвідношенням
+
+\end{enumerate}
+
+$$
+T x=\left\{\bar{y} \in Y: \phi(x, \bar{y})=\inf _{y \in Y} \phi(x, y)\right\}
+$$
+
+замкнене ${ }^{1}$.
+
+\begin{enumerate}
+  \setcounter{enumi}{9}
+  \item Нехай $A, B$ - непорожні опуклі компакти з банахових просторів $X, Y$, відповідно. Функція $L: X \times Y \rightarrow \mathbb{R}-$ неперервна на $A \times B$ та опукла по $x$ на $A$ (для всіх $y \in B$ ), угнута по $y$ на $B$ (для всіх $x \in A$ ). Доведіть, що існує сідлова точка функції $L$ на $A \times B$, тобто, існує $\left(x_{0}, y_{0}\right) \in A \times B$
+\end{enumerate}
+
+$$
+L\left(x_{0}, y\right) \leq L\left(x_{0}, y_{0}\right) \leq L\left(x, y_{0}\right) \quad \forall x \in A \forall y \in B
+$$
+
+$1_{X, Y-\text { метричні простори. }}$
+
+
+\end{document}
