@@ -1,0 +1,183 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{bbold}
+
+\title{Завдання 4. Від теореми Браудера до схеми Гальперна ${ }^{1}$ }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+  \item Покажіть, що лема 1 з лекції 7 справедлива для строго опуклих лінійних нормованих просторів.
+
+  \item Нехай $C-$ непорожня підмножина гільбертового простору $H, T_{1}, T_{2}, \ldots, T_{m}: C \rightarrow H-$ нерозтягуючі оператори, причому $\bigcap_{n=1}^{m} F\left(T_{n}\right) \neq \emptyset$. Доведіть, що для довільного набору $\left\{\lambda_{1}, \ldots, \lambda_{m}\right\}$ додатніх чисел $3 \sum_{n=1}^{m} \lambda_{n}=1$ оператор
+
+\end{enumerate}
+
+$$
+T x=\sum_{n=1}^{m} \lambda_{n} T_{n} x \quad(x \in C)
+$$
+
+$\in$ нерозтягуючим та $F(T)=\bigcap_{n=1}^{m} F\left(T_{n}\right)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item Нехай $C-$ непорожня підмножина гільбертового простору $H, T_{1}, T_{2}, \ldots, T_{m}: C \rightarrow H-$ строго квазінерозтягуючі оператори ${ }^{2}$, причому $\bigcap_{n=1}^{m} F\left(T_{n}\right) \neq \emptyset$. Доведіть, що оператор
+\end{enumerate}
+
+$$
+T x=T_{1} T_{2} \ldots T_{m} x \quad(x \in C)
+$$
+
+є строго квазінерозтягуючим та $F(T)=\bigcap_{n=1}^{m} F\left(T_{n}\right)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item Нехай $C-$ непорожня опукла замкнена підмножина гільбертового простору $H, T: C \rightarrow H$ - нерозтягуючий оператор з $F(T) \neq \emptyset$. Припустимо, що послідовність точок $x_{n} \in C$ має властивості:
+\end{enumerate}
+
+\begin{enumerate}
+  \item $\forall p \in F(T) \exists \lim _{n \rightarrow \infty}\left\|x_{n}-p\right\| \in \mathbb{R}$;
+
+  \item $\lim _{n \rightarrow \infty}\left\|x_{n}-T x_{n}\right\|=0$.
+
+\end{enumerate}
+
+Доведіть, що послідовність $\left(x_{n}\right)$ слабко збігається до точки $з . F(T)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item Нехай $H$ - гільбертовий простір, $T: H \rightarrow H-$ твердо нерозтягуючий оператор $^{3}$ із $F(T) \neq$ Ø. Розглянемо метод простої ітерації:
+\end{enumerate}
+
+$$
+\left\{\begin{array}{l}
+x_{0} \in H \\
+x_{n+1}=T x_{n}
+\end{array}\right.
+$$
+
+Доведіть, що послідовність $\left(x_{n}\right)$ слабко збігається до деякої точки з $F(T)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item Нехай $H$ - гільбертовий простір, $C \subseteq H-$ непорожня опукла замкнена множина, $T: C \rightarrow$ $C$ - нерозтягуючий оператор, $F(T) \neq \emptyset, y \in C$. Покажіть, що для довільного $t \in(0,1)$ існує єдиний елемент $x_{t} \in C$, такий, що
+\end{enumerate}
+
+$$
+x_{t}=T\left(t y+(1-t) x_{t}\right) .
+$$
+
+Доведіть, що при $t \rightarrow 0$ крива $t \mapsto x_{t}$ сильно збігається до точки $\bar{x}$, такої, що $\bar{x}=P_{F(T)} y$.
+
+\begin{enumerate}
+  \setcounter{enumi}{6}
+  \item Нехай $H$ - гільбертовий простір, $C \subseteq H-$ непорожня опукла замкнена множина, $T: C \rightarrow C$ - нерозтягуючий оператор з $F(T) \neq \emptyset, f: C \rightarrow C-$ стискаючий оператор. Для заданого $x_{0} \in C$ генеруємо послідовність елементів $x_{n} \in C$ за допомогою ітераційної схеми:
+\end{enumerate}
+
+$$
+x_{n+1}=\alpha_{n} f\left(x_{n}\right)+\left(1-\alpha_{n}\right) T x_{n}
+$$
+
+де послідовність чисел $\alpha_{n} \in(0,1)$ задовольняє умови:
+
+${ }^{1}$ Лекції 7 та 8
+
+2 Оператор $T: C \rightarrow H$ називають строго квазінерозтягуючим, якщо
+
+$$
+\|T x-y\|<\|x-y\| \quad \forall x \in C \backslash F(T) \quad \forall y \in F(T)
+$$
+
+3 Оператор $T: H \rightarrow H$ називатимемо твердо нерозтягуючим (firmly nonexpansive), якщо
+
+$$
+\|T x-T y\|^{2} \leq\|x-y\|^{2}-\|(I-T) x-(I-T) y\|^{2} \quad \forall x, y \in H
+$$
+
+\begin{enumerate}
+  \item $\lim _{n \rightarrow \infty} \alpha_{n}=0$
+
+  \item $\sum_{n=0}^{\infty} \alpha_{n}=+\infty$
+
+  \item $\sum_{n=0}^{\infty}\left|\alpha_{n+1}-\alpha_{n}\right|<+\infty$
+
+\end{enumerate}
+
+Доведіть, що згенерована послідовність $\left(x_{n}\right)$ сильно збігається до точки $z \in F(T)$, такої, що $z=P_{F(T)} f(z)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{7}
+  \item Нехай оператор $T: H \rightarrow H-$ нерозтягуючий, оператор $A: H \rightarrow H-$ ліпшицевий та сильно монотонний $^{4}$ із сталими $L>0, l>0$, відповідно. Оператор $T_{\alpha}: H \rightarrow H$ задано рівністю
+\end{enumerate}
+
+$$
+T_{\alpha} x=T x-\alpha A T x, \quad \alpha \in[0,+\infty) .
+$$
+
+Доведіть, що для довільного $\mu \in\left(0, \frac{2 l}{L^{2}}\right)$ маємо
+
+$$
+\left\|T_{\alpha} x-T_{\alpha} y\right\| \leq\left(1-\frac{\tau}{\mu} \alpha\right)\|x-y\| \quad \forall x \in H \forall y \in H
+$$
+
+де $\alpha \in[0, \mu], \tau=1-\sqrt{1-2 l \mu+L^{2} \mu^{2}} \in(0,1]$.
+
+\begin{enumerate}
+  \setcounter{enumi}{8}
+  \item Нехай оператор $T: H \rightarrow H-$ нерозтягуючий, оператор $A: H \rightarrow H-$ ліпшицевий та сильно монотонний. Розглянемо ітераційну схему ${ }^{5}$ :
+\end{enumerate}
+
+$$
+\left\{\begin{array}{l}
+y_{n}=T x_{n} \\
+x_{n+1}=y_{n}-\alpha_{n} A y_{n}
+\end{array}\right.
+$$
+
+де послідовність чисел $\alpha_{n} \in(0,1)$ задовольняє умови:
+
+\begin{enumerate}
+  \item $\lim _{n \rightarrow \infty} \alpha_{n}=0$
+
+  \item $\sum_{n=0}^{\infty} \alpha_{n}=+\infty$
+
+  \item $\sum_{n=0}^{\infty}\left|\alpha_{n+1}-\alpha_{n}\right|<+\infty$
+
+\end{enumerate}
+
+Доведіть, що породжена послідовність $\left(x_{n}\right)$ сильно збігається до єдиного розв'язку варіаційної нерівності:
+
+$$
+\text { знайти } x \in C:(A x, y-x) \geq 0 \quad \forall y \in F(T) \text {. }
+$$
+
+${ }^{4}$ Оператор $A: H \rightarrow H$ задовольняє умову Ліпшиця, якщо існує така константа $L>0$, що
+
+$$
+\|A x-A y\| \leq L\|x-y\| \quad \forall x, y \in H .
+$$
+
+Оператор $A: H \rightarrow H$ називають сильно монотонним, якщо існує така константа $l>0$, що
+
+$$
+(A x-A y, x-y) \geq l\|x-y\|^{2} \quad \forall x, y \in H
+$$
+
+5 Якщо покласти $A=\nabla f(f-$ гладка сильно опукла функція $), T=P_{C_{1}} P_{C_{1}} \ldots P_{C_{N}}$ або $T=\frac{1}{N} \sum_{i=1}^{N} P_{C_{i}}\left(P_{C_{i}}-\right.$ проектор на замкнену опуклу множину $C_{i}$ ), то отримаємо алгоритм для задачі мінімізації гладкої сильно опуклої функції на перетині замкнених опуклих множин:
+
+$$
+f(x) \rightarrow \min , \quad x \in \cap_{i=1}^{N} C_{i}
+$$
+
+
+\end{document}
