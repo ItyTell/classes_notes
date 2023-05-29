@@ -7,7 +7,7 @@
 \input{packages}
 \input{config.tex}
 
-\title{Гадієнтний метод Нестерова}
+\title{Різні модифікації градієнтного методу}
 \author{Коломієць Микола}
 
 \date{\today}
@@ -16,14 +16,44 @@
 
 \maketitle
 
-\begin{frame}
+\begin{frame}{Визначення}
 
     \begin{statement}{Визначення}
         Умова ліпшиця для градієнта з константою $L$
 
-        $$\|\delta f(x_1) - \delta f(x_2) \| \geq L \|x_1 - x_2 \| $$
+        $$\| \nabla f(x_1) - \nabla f(x_2) \| \geq L \|x_1 - x_2 \| $$
     \end{statement}
     
+    \begin{statement}{Визначення}
+        Гладка функція — це функція, що має неперервну похідну 
+        на всій області визначення.
+    \end{statement}
+
 \end{frame}
+
+\begin{frame}{Визначення}
+    \begin{statement}{Визначення}
+        m-сильно опукла функція - функція, що задовільняє нерівність:
+        $$ f(y) \geq f(x) + \nabla f(x) (y - x) + \frac{m}{2}\|y - x\|^2 $$
+    \end{statement}
+\end{frame}
+
+\begin{frame}{Формалювання проблеми}
+    $\min\limits_{x \in \mathbb{R}^n}f(x)$, 
+    де $f$ гладка і опукла функція. 
+    Часто ще додають сильну m-опуклість та умову Ліпшиця. 
+
+
+    Згадаємо базовий градієнтний методу
+    $$x_{k+1} = x_k -\alpha \nabla f(x_k)$$
+
+    $\alpha = \frac{1}{L}, N = O(\frac{L}{m}
+    \ln(\frac{\|x_0 - x^*\|^2}{\varepsilon}))$
+\end{frame}
+
+\begin{frame}{Градієнтний метод}
+    $$x_{k+1} = x_k - \alpha_k \nabla f(x_k), \alpha_k \rightarrow 0$$
+\end{frame}
+
 
 \end{document}
