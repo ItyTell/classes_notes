@@ -51,9 +51,56 @@
     \ln(\frac{\|x_0 - x^*\|^2}{\varepsilon}))$
 \end{frame}
 
-\begin{frame}{Градієнтний метод}
-    $$x_{k+1} = x_k - \alpha_k \nabla f(x_k), \alpha_k \rightarrow 0$$
+\begin{frame}{Проблема незмінного кроку}
+    \begin{figure}
+        \includegraphics[width = 0.5 \textwidth]{imgs/problem_step_size.png}
+    \end{figure}
+    
 \end{frame}
 
+\begin{frame}{Змінний крок}
+    $$x_{k+1} = x_k - \alpha_k \nabla f(x_k), \alpha_k \rightarrow 0$$
+    \begin{figure}
+        \includegraphics[width = 0.6\textwidth]{imgs/gradient.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Метод важкого шара Поляка}
+    \begin{figure}
+        \includegraphics[width = 0.8\textwidth]{imgs/polyak.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Метод важкого шара Поляка}
+    $x_{k + 1} = x_k - \alpha_k \nabla f(x_k) + \beta (x_k - x_{k-1}), 
+    \beta $- масса шара 
+\end{frame}
+
+\begin{frame}{Метод Нестерова}
+    $x_{k + 1} = y_k - \alpha_k \nabla f(y_k) $ 
+
+
+    $y_{k+1} = x_{k+1} + \beta (x_{k+1} - x_k)$
+    \begin{figure}
+        \includegraphics[width = 0.5\textwidth]{imgs/nesterov.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Метод Нестерова}
+    \begin{theo}{Теорема}
+        Для досягнення точності $\varepsilon$, отримання 
+        $x_N$, такого що $f\left(x_N\right)-f^* \leq \varepsilon$, 
+        методу Нестерова потрібно
+        
+        
+        - в опулому випадку: 
+        $N=O\left(\frac{L R^2}{\sqrt{\varepsilon}}\right)$
+
+
+        - у сильно опуклому випадку 
+        $N=O\left(\sqrt{\frac{L}{\mu}} \log 
+        \left(\frac{1}{\varepsilon}\right)\right)$ 
+    \end{theo}
+\end{frame}
 
 \end{document}
