@@ -19,7 +19,7 @@
 \begin{frame}{Визначення}
 
     \begin{statement}{Визначення}
-        Умова ліпшиця для градієнта з константою $L$
+        Умова Ліпшиця для градієнта з константою $L$
 
         $$\| \nabla f(x_1) - \nabla f(x_2) \| \geq L \|x_1 - x_2 \| $$
     \end{statement}
@@ -43,11 +43,13 @@
     де $f$ гладка і опукла функція. 
     Часто ще додають сильну m-опуклість та умову Ліпшиця. 
 
+\end{frame}
+\begin{frame}{Градієнтний метод}
 
     Згадаємо базовий градієнтний методу
     $$x_{k+1} = x_k -\alpha \nabla f(x_k)$$
 
-    $\alpha = \frac{1}{L}, N = O(\frac{L}{m}
+    $\alpha = \frac{2}{L}, N = O(\frac{L}{m}
     \ln(\frac{\|x_0 - x^*\|^2}{\varepsilon}))$
 \end{frame}
 
@@ -76,11 +78,19 @@
     \beta $- масса шара 
 \end{frame}
 
+
 \begin{frame}{Метод Нестерова}
-    $x_{k + 1} = y_k - \alpha_k \nabla f(y_k) $ 
+    $x_{k + 1} = y_k - \alpha_k \nabla f(y_k) $
 
 
-    $y_{k+1} = x_{k+1} + \beta (x_{k+1} - x_k)$
+    $y_{k+1} = x_{k+1} + \beta_k (x_{k+1} - x_k)$
+
+
+    Або 
+    
+
+    $x_{k+1} = x_k + \beta_k (x_k - x_{k -1}) - \alpha_k 
+    \nabla f(x_k + \beta_k (x_k - x_{k - 1}))$ 
     \begin{figure}
         \includegraphics[width = 0.5\textwidth]{imgs/nesterov.png}
     \end{figure}
@@ -108,5 +118,47 @@
         \left(\frac{1}{\varepsilon}\right)\right)$ 
     \end{theo}
 \end{frame}
+
+\begin{frame}{Стохастичний градієнтний метод}
+    Задача: 
+    $$ F(x) = \frac{1}{n} \sum_{i = 1}^{n}f_i(x) \rightarrow min, x \in 
+    \mathbb{R}^d, f_i: \mathbb{R}^d \rightarrow \mathbb{R} $$
+    \begin{enumerate}
+        \item $f_i$ опуклі 
+        \item $f_i$ гладкі з $L_i$ константою
+        \item $F \ m$-сильно опукла
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Запозичення в ML}
+    $$x_{k+1} = x_k - \alpha_k \nabla f_{i_k}(x_k) + \beta_k (x_k - x_{k - 1})$$
+
+\end{frame}
+
+\begin{frame}{Метод важкого шара Поляка}
+    \begin{theo}{Теорема}
+        Якщо взяти за параметри методу $\alpha_k = \frac{2\mu}{k + 2}$, 
+        $\beta_k = \frac{k}{k + 2}$ де $0 < \mu \le \frac{1}{4L_{max}}  $
+
+
+        Тоді для довільного $N \in \mathbb{N}$ має місце оцінка
+
+
+        $$M(F(x_N) - \min F) \le \frac{\|x_0 - x^*\|^2}{\mu(N+1)} + 
+        \frac{2\mu}{n} \sum_{i = 1}^{n}\|\nabla f_i(x^*)\|^2$$
+    \end{theo}
+\end{frame}
+
+
+\begin{frame}{Adam}
+    \begin{equation}
+        \begin{gathered}
+            m_i^k=\beta_1 m_i^{k-1}+\left(1-\beta_1\right) g_i^k, \quad \hat{m}_i^k=\frac{m_i^k}{1-\beta_1^k}, \\
+            v_i^k=\beta_2 v_i^{k-1}+\left(1-\beta_2\right)\left(g_i^k\right)^2, \quad \hat{v}_i^k=\frac{v_i^k}{1-\beta_2^k}, \\
+            x_i^{k+1}=x_i^k-\frac{\eta}{\sqrt{\hat{v}_i^k}+\varepsilon} \hat{m}_i^k, \quad i=\overline{1, d}, \quad \varepsilon=10^{-8},
+        \end{gathered}
+    \end{equation}
+\end{frame}
+
 
 \end{document}
