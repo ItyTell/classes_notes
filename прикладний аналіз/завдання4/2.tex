@@ -22,3 +22,34 @@
 \end{tcolorbox}
 
 \center{\bfseries Розв'язання:}
+
+
+Нехай $x \in \bigcap\limits_{n = 1}^{m}F(T_n) \Rightarrow 
+\forall n \in \mathbb{N}, n < m, T_nx = x$ тоді 
+
+
+$$Tx = \sum\limits_{n=1}^{m} \lambda_nT_nx = \sum\limits_{n=1}^{m}\lambda_nx = 
+x \overbrace{\sum\limits_{n=1}^{m}\lambda_n}^{\mbox{1}} = x$$
+
+Отже $x \in F(T)$ тобто $F(T)\supseteq\bigcap\limits_{n=1}^{m} F(T_{n})$
+
+
+Нехай $x \in F(T), Tx = x$ і нехай від супротивного $\exists m_1: T_{k}x \neq x, 
+k \in m_1$ Тоді 
+
+
+$$Tx = \sum_{n = 1}^{m}\lambda_nT_nx = x\sum_{n = 1}^{m - |m_1|}\lambda_n + 
+\sum_{k \in m_1}\lambda_k T_kx = x\sum_{n=1}^{m}\lambda_n$$
+
+
+$\sum\limits_{k\in m_1} \lambda_k (T_kx - x) = 0 \Rightarrow T_kx = x$
+протиріччя
+
+
+Отже $\forall x \in F(T), \forall n \le m, T_nx = x$
+
+
+Отже $F(T) = \bigcap\limits_{n=1}^{m} F(T_{n})$
+
+
+Доведено!
