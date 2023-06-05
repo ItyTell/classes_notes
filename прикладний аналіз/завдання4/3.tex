@@ -30,3 +30,31 @@ $\forall k \in \mathbb{N}, k \le m: T_kx = x$
 
 
 Отже $F(T) \supseteq \bigcap\limits_{n=1}^mF(T_n)$
+
+
+Нехай $x \in F(T), \exists$ найбільше $ k < m: \quad T_k x = x_1 \neq x$ тоді 
+
+
+$Tx = T_1T_2\dots T_mx = T_1T_2\dots T_{k-1}x_1 = x$
+
+
+З строгої не розтягуваності маємо $\|T_{k-1}x_1 - x\| < \|x_1-x\|$, 
+тобто $T_{k-1}x_1 = x_2 \neq x$
+
+
+Подібні речі проводимо $k-1$ раз уже з новими $x_2, x_3 \dots$, 
+
+
+отримаємо $T_x \neq x$ - протиріччя. Отже $F(T) = \bigcap\limits_{n=1}^mF(T_n)$
+
+
+Доведемо строгу квазінерозтягуваючість 
+
+
+$\|Tx - y\| = \|T_1T_2\dots T_m x - y\| = \|T_1(T_2\dots T_m x) - y\| \le$
+
+
+$\le \|T_2T_3\dots T_m x - y\| = \dots \le \|x - y\|$
+
+
+Доведено!
