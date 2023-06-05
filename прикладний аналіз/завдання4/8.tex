@@ -2,28 +2,20 @@
 \chapter{Завдання \theHchapter}
 
 \begin{tcolorbox}[title=Завдання]
-    Нехай $\left(X, d_{X}\right),\left(Y, d_{Y}\right)-$ метричні простори, 
-    $\left(Y, d_{Y}\right)-$ компактний простір. 
-    Нехай $f \in$ $C(X \times Y)$ та 
-    $g(x)=\max\limits _{y \in Y} f(x, y)$. 
-    Доведіть, що $g \in C(X)$.
+    Нехай оператор $T: H \rightarrow H-$ нерозтягуючий, оператор $A: H \rightarrow H-$ ліпшицевий та сильно монотонний $^{4}$ із сталими $L>0, l>0$, відповідно. Оператор $T_{\alpha}: H \rightarrow H$ задано рівністю
+
+    $$
+    T_{\alpha} x=T x-\alpha A T x, \quad \alpha \in[0,+\infty) .
+    $$
+
+    Доведіть, що для довільного $\mu \in\left(0, \frac{2 l}{L^{2}}\right)$ маємо
+
+    $$
+    \left\|T_{\alpha} x-T_{\alpha} y\right\| \leq\left(1-\frac{\tau}{\mu} \alpha\right)\|x-y\| \quad \forall x \in H \forall y \in H
+    $$
+    \vspace{0.3cm}
+
+    де $\alpha \in[0, \mu], \tau=1-\sqrt{1-2 l \mu+L^{2} \mu^{2}} \in(0,1]$.
 \end{tcolorbox}
 
 \center{\bfseries Розв'язання:}
-
-
-$x_n \rightarrow x, y_n \rightarrow y, 
-f(x_n, y_n) \rightarrow f(x, y)$
-
-
-$g(x_n) = \max\limits_{y \in Y}f(x_n, y) = 
-\max\limits_{y_n \in Y}f(x_n, y_n)$
-
-
-$Y$ компакт а отже $y \in Y$ з визначення компакта 
-($\forall n \in \mathbb{N}, y_n \in Y$)
-
-
-Отже $g(x_n) \rightarrow g(x)$. Отже є неперервною за Ріманом
-
-Доведено!
