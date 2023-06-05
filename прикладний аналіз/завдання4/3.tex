@@ -7,16 +7,26 @@
     
     $H, T_{1}, T_{2}, \ldots, T_{m}: C \rightarrow H-$ 
     строго квазінерозтягуючі оператори, причому 
-    $\bigcap_{n=1}^{m} F\left(T_{n}\right) \neq \emptyset$. 
+    $$\bigcap_{n=1}^{m} F\left(T_{n}\right) \neq \emptyset$$
     Доведіть, що оператор
+    $T x=T_{1} T_{2} \ldots T_{m} x \quad(x \in C)$
 
-    $$
-    T x=T_{1} T_{2} \ldots T_{m} x \quad(x \in C)
-    $$
 
-    є строго квазінерозтягуючим та $F(T)=\bigcap_{n=1}^{m} F\left(T_{n}\right)$.
+    є строго квазінерозтягуючим та 
+    $F(T)=\bigcap\limits_{n=1}^{m} F\left(T_{n}\right)$.
 
 
 \end{tcolorbox}
 
 \center{\bfseries Розв'язання:}
+
+
+Нехай $x \in \bigcap\limits_{n=1}^mF(T_n)$ тоді за визначенням 
+$\forall k \in \mathbb{N}, k \le m: T_kx = x$
+
+
+Тоді $Tx = T_1T_2\dots T_{m-1}T_m = T_1T2\dots T_{m-1}x = \dots = x 
+\Rightarrow x \in F(T)$ 
+
+
+Отже $F(T) \supseteq \bigcap\limits_{n=1}^mF(T_n)$
