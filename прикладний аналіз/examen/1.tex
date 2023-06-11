@@ -32,39 +32,67 @@
 \center{\bfseries Розв'язання:}
 
 
-Нехай $h \in C(X)$, будемо шукати таку $f$ для $\varepsilon \in R$, що 
-$\|h - f\| < \varepsilon $
-
-
 \pagebreak
 
 Нехай $h \in C(X)$ і дана $\varepsilon$. 
+
+
 Ми шукаємо $f \in S$ що задовільняє умову 
 $\|h-f\|<\varepsilon$.
+
+
 Покажемо для кожного $x \in X$, існує 
-$f_x \in S$ така, що $f_x(x)=h(x)$ і $h \leq f_x+\varepsilon$.
+$f_x \in S$ така, що 
+
+
+$f_x(x)=h(x)$ і $h \leq f_x+\varepsilon$.
+
+
 Тоді для кожного $x$, знайдемо $U_x$, відкритий окіл $x$ з 
-$h(y) \geq f_x(y)-\varepsilon$ для кожного $y \in U_x$ 
-(з неперервності $h-f_x$ ). 
+$h(y) \geq f_x(y)-\varepsilon$ 
+
+
+для кожного $y \in U_x$ (з неперервності $h-f_x$ ). 
+
+
 $U_x$ покриття $X$ тож нехай $U_{x_1}, \ldots, U_{x_n}$ підпокриття. 
-Тоді $f=f_{x_1} \wedge \cdots \wedge f_{x_m}$ задовільняють умову 
+
+
+Тоді $f=f_{x_1} \wedge \cdots \wedge f_{x_m}$ задовільняють умову
+
+
 $f(y)+\varepsilon=$ $\min _i\left\{f_{x_i}(y)+\varepsilon\right\} 
 \geq h(y)$. 
-Більше того з того, що $y \in U_{x_i}$ для певного $i, 
-f(y)-\varepsilon$ $\leq f_{x_i}(y)-\varepsilon \leq h(y)$. 
+
+
+Більше того з того, що $y \in U_{x_i}$ для певного $i$:
+
+
+$f(y)-\varepsilon$ $\leq f_{x_i}(y)-\varepsilon \leq h(y) \le 
+f_{x_i} + \varepsilon$. 
+
+
 Таким чином $\|f-h\|_{\infty}<\varepsilon$.
 
 Тепер спробуємо знайти $f_x$, що задовільняють цим умовам. 
+
+
 З того, що $S$ сильно розділяє точки і $1 \in S$, 
 для кожного $x$ та $y$ в $X$, ми можемо знайти $f_{x y} \in S$ 
 з $f_{x y}(x)= h(x)$ і $f_{x y}(y)=h(y)$. 
+
+
 Для кожного $y$, ми можемо знайти $V_y$, відкриту множину навколо $y$ 
 з $f_{\dot{x}_y}(z)+\varepsilon \geq h(z)$ 
 для $z \in V_y . V_{y_1}, \ldots, V_{y_n}$ є покриттям $X$ 
 для підходящих $y_1, \ldots, y_n$. 
+
+
 Якщо взяти $f_x=f_{x y_1} \vee \cdots \vee f_{x y_n}$, 
 тоді $f_x(x)=h(x)$, і для будь-якого $z \in X$
 $$
 f_x(z)+\varepsilon=\max _{i=1, \ldots, n}\left\{f_{x y_1}(z)+\varepsilon\right\} \geq h(z)
 $$
+
+
 Це завершує доведення
