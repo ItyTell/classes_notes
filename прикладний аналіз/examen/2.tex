@@ -1,0 +1,37 @@
+
+\chapter{Завдання \theHchapter}
+
+\begin{tcolorbox}[title=Завдання]
+    Нехай неперервне відображення $f: B^{n} \rightarrow \mathbb{R}^{n}$ має властивість:
+    $$(f(x), x) \geq 0 \quad \forall x \in S^{n-1} .$$
+    Доведіть, що існує точка $x_{0} \in B^{n}: f\left(x_{0}\right)=0$.
+
+\end{tcolorbox}
+
+\center{\bfseries Розв'язання:}
+
+Доводити будемо від супротивного. 
+
+
+Нехай 
+$\forall x \in B^n, f(x) \neq 0 $.
+
+
+Визначимо неперервне відображення 
+
+
+$B^n \xrightarrow{\phi} B^n, \quad 
+\phi x = - \frac{f(x)}{\|f(x)\|}$
+
+
+За теоремою Брауера 
+
+
+$\exists y \in B^n, \quad-\frac{f(y)}{\|f(y)\|} = y \Rightarrow 
+(f(y), y) = -\|f(y)\| < 0$
+
+
+З включення $y \in S^{n-1}$ маємо протиріччя з умовою задачі.
+
+
+Доведено!
