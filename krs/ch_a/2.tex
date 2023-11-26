@@ -1,0 +1,48 @@
+\section{Друга задача}
+
+\begin{tcolorbox}[title=Задача 2]
+    \begin{center}
+        Побудувати лінійний поліном МНК для наближення функції 
+        $f(x) = cos^2(x)$, взявши 4 вузли на проміжку [-2, 2]
+    \end{center}
+\end{tcolorbox}
+
+Я взяв проміжок [-2, 1], щоб легше рахувати було, тоді $X = (-2, -1, 0, 1)^T$, 
+функції по яким апроксимуєму - $F = [1, x]$
+
+
+Будуємо матрицю А та вектор b таким чином:
+
+$$\begin{pmatrix}
+    \sum\limits_{x \in X} f_1(x)f_1(x), \sum\limits_{x \in X} f_2(x)f_1(x)\\
+    \sum\limits_{x \in X} f_1(x)f_2(x), \sum\limits_{x \in X} f_2(x)f_2(x)
+\end{pmatrix} = 
+\begin{pmatrix}
+    4, -2 \\
+    -2, 6
+\end{pmatrix}$$
+
+$$ b = \begin{pmatrix}
+    \sum\limits_{x\in X}f_1(x)*f(x)\\
+    \sum\limits_{x\in X}f_2(x)*f(x)
+\end{pmatrix} = \begin{pmatrix}
+    cos(2)^2 + 2cos(1)^2 + 1 \\ -2cos(2)^2
+\end{pmatrix}
+$$
+
+Тепер наша задача зводиться до вирішення системи:
+
+$$ \begin{pmatrix} 4a_0 - 2a_1 \\ 6a_1 - 2a_0  \end{pmatrix} =
+\begin{pmatrix}cos(2)^2 + 2cos(1)^2 + 1 \\ -2cos(2)^2 \end{pmatrix} = 
+\begin{pmatrix}1.8 \\ -0.35\end{pmatrix}
+$$
+
+Методом крамера:
+$$
+\begin{cases}
+    a_0 = \frac{\begin{vmatrix}1.8, -2 \\ -0.35, 6 \end{vmatrix} }{20} = 0.5\\
+    a_1 = \frac{\begin{vmatrix}2, 1.8 \\ 2, 0.35 \end{vmatrix} }{20} = 0.1
+\end{cases}
+$$
+
+Отже выдповідь буде $f_{aprox} = 0.5 + 0.1x$
