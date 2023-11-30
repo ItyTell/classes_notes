@@ -8,19 +8,27 @@
     \end{equation}
 \end{tcolorbox}
 
-За означенням $\mu$-опуклості маємо, що 
-\begin{equation}
-    (\nabla f(x) - \nabla f(y), x - y) \geq \mu ||x - y||_2^2
-\end{equation}
+Спочатку припустимо, що $f(x) $є сильно опуклим, потім
+$$
+\begin{aligned}
+& f(\lambda \mathbf{x}+(1-\lambda) \mathbf{y}) \leq \lambda f(\mathbf{x})+(1-\lambda) f(\mathbf{y})-\frac{\mu}{2} \lambda(1-\lambda)\|\mathbf{x}-\mathbf{y}\|^2 \\
+& \Rightarrow \frac{f(\lambda \mathbf{x}+(1-\lambda) \mathbf{y})-f(\mathbf{y})}{\lambda} \leq f(\mathbf{x})-f(\mathbf{y})-\frac{\mu}{2}(1-\lambda)\|\mathbf{x}-\mathbf{y}\|^2 .
+\end{aligned}
+$$
 
-За теоремою Лагранжа маємо, що
-\begin{equation}
-    f(y) - f(x) = (\nabla f(x), y - x) + \frac{1}{2} (\nabla f(x) - \nabla f(y), y - x)
-\end{equation}
+Нехай $g(t)=f(t \mathbf{x}+(1-t) \mathbf{y})$ тоді $g(0)=f(\mathbf{y})$ і
+$$
+g^{\prime}(t)=\nabla f(t \mathbf{x}+(1-t) \mathbf{y})^T(\mathbf{x}-\mathbf{y})=(\nabla f(t \mathbf{x}+(1-t) \mathbf{y}), \mathbf{x}-\mathbf{y}) .
+$$
 
-Підставляючи (2) в (3) маємо
-\begin{equation}
-    f(y) - f(x) \geq (\nabla f(x), y - x) + \frac{\mu}{2} ||x - y||_2^2
-\end{equation}
+За теоремою про середнє існує $s \in(0, t)$ таке що $g^{\prime}(s)=$ $\frac{g(t)-g(0)}{t}$, тоді
+$$
+\frac{f(t \mathbf{x}+(1-t) \mathbf{y})-f(\mathbf{y})}{t}=\frac{g(t)-g(0)}{t}=g^{\prime}(s)=(\nabla f(s \mathbf{x}+(1-s) \mathbf{y}), \mathbf{x}-\mathbf{y}),
+$$
+$$
+(\nabla f(s \mathbf{x}+(1-s) \mathbf{y}), \mathbf{x}-\mathbf{y}) \leq f(\mathbf{x})-f(\mathbf{y})-\frac{\mu}{2}(1-t)\|\mathbf{x}-\mathbf{y}\|^2 .
+$$
 
-Доведено
+Нехай $t \rightarrow 0$ тоді $s \rightarrow 0$, отримаємо $f(\mathbf{x}) \geq f(\mathbf{y})+(\nabla f(\mathbf{y}), \mathbf{x}-\mathbf{y})+\frac{\mu}{2}\|\mathbf{x}-\mathbf{y}\|^2$.
+
+Отже властивість доведена
