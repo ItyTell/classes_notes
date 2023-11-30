@@ -1,0 +1,23 @@
+
+\section{задача}
+\begin{tcolorbox}[title=Умова]
+    Нехай $f: E \rightarrow \mathbb{R}$ - опукла гладка функція. Доведіть, що
+    $$
+    f(y) \geq f(x)+(\nabla f(x), y-x) \quad \forall x, y \in E .
+    $$
+\end{tcolorbox}
+
+Для опуклої функції $f$ має місце нерівність
+$$
+f(x+t(y-x)) \leq(1-t) f(x)+t f(y) \quad t \in[0,1] .
+$$
+
+Розділимо обидві частини на $t$ і перенесемо $f(x)$ :
+$$
+f(y) \geq f(x)+\frac{f(x+t(y-x))-f(x)}{t} .
+$$
+
+При $t \rightarrow 0$ отримаємо нерівність з умови.
+
+
+Доведено

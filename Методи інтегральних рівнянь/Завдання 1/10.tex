@@ -1,0 +1,26 @@
+
+\section{задача}
+\begin{tcolorbox}[title=Умова]
+    Нехай $f: E \rightarrow \mathbb{R}$ - опукла гладка функція. Доведіть, що
+    $$
+    (\nabla f(x)-\nabla f(y), x-y) \geq 0 \quad \forall x, y \in E .
+    $$
+\end{tcolorbox}
+
+Скористаємося результатом попередньої задачі для $(x, y)$ та $(y, x)$ :
+$$
+\begin{aligned}
+& f(y) \geq f(x)+(\nabla f(x), y-x), \\
+& f(x) \geq f(y)+(\nabla f(y), x-y) .
+\end{aligned}
+$$
+
+Додаючи ці нерівності отримаємо
+$$
+0 \geq(\nabla f(x), y-x)+(\nabla f(y), x-y),
+$$
+$$
+(\nabla f(x)-\nabla f(y), x-y) \geq 0 .
+$$
+
+що і треба було довести.
