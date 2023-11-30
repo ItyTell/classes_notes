@@ -1,0 +1,28 @@
+\section{Перша задача}
+
+
+\begin{tcolorbox}[title=Задача 1]
+    Дослідіть на диференційовність функцію
+    $$
+    f(x)=\frac{1}{2}(A x, x)-(b, x),
+    $$
+
+    де $A: \mathbb{R}^n \rightarrow \mathbb{R}^n$ - самоспряжений лінійний оператор, $b \in \mathbb{R}^n$.
+\end{tcolorbox}
+
+
+$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} = 
+\lim_{h \to 0} \frac{
+    \frac{1}{2}(A(x+h), x+h) - (b, x+h) - \frac{1}{2}(Ax, x) + (b, x)}{h}=
+$$
+$$
+= \lim_{h \to 0} \frac{
+    \frac{1}{2}(Ax, x) + \frac{1}{2}(Ah, x) + \frac{1}{2}(Ax, h) + \frac{1}{2}(Ah, h) - (b, h) - \frac{1}{2}(Ax, x)}{h}=
+$$
+$$
+= \lim_{h \to 0} \frac{
+    \frac{1}{2}(Ah, x) + \frac{1}{2}(Ax, h) + \frac{1}{2}(Ah, h) - (b, h)}{h}=
+    \lim_{h \to 0}\frac{O(h)}{h} = O(1)
+$$
+
+Отже функція $f(x)$ диференційовна в $\mathbb{R}^n$.
