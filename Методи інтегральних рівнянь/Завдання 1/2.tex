@@ -1,26 +1,28 @@
-\section{Друга задача}
+\section{задача}
 
 
-\begin{tcolorbox}[title = Друга задача]
-    Нехай $f(x)$ - $\mu$-опукла та диференційовна функція. Доведіть, що 
-    \begin{equation}
-        f(y) \geq f(x) + (\nabla f(x) , y - x) + \frac{\mu}{2} ||y - x||_2^2, \forall x, y \in E
-    \end{equation}
+\begin{tcolorbox}[title=Умова]
+    Дослідіть на диференційовність функцію
+    $$
+    f(x)=\frac{1}{2}(A x, x)-(b, x),
+    $$
+
+    де $A: \mathbb{R}^n \rightarrow \mathbb{R}^n$ - самоспряжений лінійний оператор, $b \in \mathbb{R}^n$.
 \end{tcolorbox}
 
-За означенням $\mu$-опуклості маємо, що 
-\begin{equation}
-    (\nabla f(x) - \nabla f(y), x - y) \geq \mu ||x - y||_2^2
-\end{equation}
 
-За теоремою Лагранжа маємо, що
-\begin{equation}
-    f(y) - f(x) = (\nabla f(x), y - x) + \frac{1}{2} (\nabla f(x) - \nabla f(y), y - x)
-\end{equation}
+$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} = 
+\lim_{h \to 0} \frac{
+    \frac{1}{2}(A(x+h), x+h) - (b, x+h) - \frac{1}{2}(Ax, x) + (b, x)}{h}=
+$$
+$$
+= \lim_{h \to 0} \frac{
+    \frac{1}{2}(Ax, x) + \frac{1}{2}(Ah, x) + \frac{1}{2}(Ax, h) + \frac{1}{2}(Ah, h) - (b, h) - \frac{1}{2}(Ax, x)}{h}=
+$$
+$$
+= \lim_{h \to 0} \frac{
+    \frac{1}{2}(Ah, x) + \frac{1}{2}(Ax, h) + \frac{1}{2}(Ah, h) - (b, h)}{h}=
+    \lim_{h \to 0}\frac{O(h)}{h} = O(1)
+$$
 
-Підставляючи (2) в (3) маємо
-\begin{equation}
-    f(y) - f(x) \geq (\nabla f(x), y - x) + \frac{\mu}{2} ||x - y||_2^2
-\end{equation}
-
-Доведено
+Скалярний добуток неперервний і $f'(x) = O(1)$ - отже $f(x)$ диференційовна.

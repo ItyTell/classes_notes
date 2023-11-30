@@ -1,28 +1,23 @@
-\section{Перша задача}
+\section{задача}
 
-
-\begin{tcolorbox}[title=Задача 1]
+\begin{tcolorbox}[title=Умова]
     Дослідіть на диференційовність функцію
-    $$
-    f(x)=\frac{1}{2}(A x, x)-(b, x),
-    $$
+    $$ f(x) = \|Ax - b\|_2^2 $$
 
-    де $A: \mathbb{R}^n \rightarrow \mathbb{R}^n$ - самоспряжений лінійний оператор, $b \in \mathbb{R}^n$.
+    де $A \in L(\mathbb{R}^n, \mathbb{R}^m)$, $b \in \mathbb{R}^m$.
 \end{tcolorbox}
 
+$$f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x - h)}{h} = 
+\lim_{h \to 0} \frac{\|A(x + h) - b\| - \|Ax - b\|}{h} $$
 
-$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} = 
-\lim_{h \to 0} \frac{
-    \frac{1}{2}(A(x+h), x+h) - (b, x+h) - \frac{1}{2}(Ax, x) + (b, x)}{h}=
-$$
-$$
-= \lim_{h \to 0} \frac{
-    \frac{1}{2}(Ax, x) + \frac{1}{2}(Ah, x) + \frac{1}{2}(Ax, h) + \frac{1}{2}(Ah, h) - (b, h) - \frac{1}{2}(Ax, x)}{h}=
-$$
-$$
-= \lim_{h \to 0} \frac{
-    \frac{1}{2}(Ah, x) + \frac{1}{2}(Ax, h) + \frac{1}{2}(Ah, h) - (b, h)}{h}=
-    \lim_{h \to 0}\frac{O(h)}{h} = O(1)
-$$
+З лінійності оператора $A$ можемо записати:
 
-Отже функція $f(x)$ диференційовна в $\mathbb{R}^n$.
+$$f'(x) = \lim_{h \to 0} \frac{\|Ax + Ah - b\| - \|Ax - b\|}{h}$$
+
+Застосуємо нерівність трикутника:
+
+$$f'(x) = \lim_{h \to 0} \frac{\|Ax + Ah - b\| - \|Ax - b\|}{h} \le 
+\lim_{h \to 0} \frac{\|Ax - b \| + \|Ah\| - \|Ax - b\|}{h} =$$ 
+$$=\lim_{h \to 0} \frac{\|Ah\|}{h} = \lim_{h \to 0} \frac{O(h)}{h} = O(1) $$
+
+Норма неперервна і $f'(x) = O(1)$ - отже $f(x)$ диференційовна.

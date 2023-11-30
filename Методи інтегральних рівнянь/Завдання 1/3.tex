@@ -1,0 +1,26 @@
+\section{задача}
+
+
+\begin{tcolorbox}[title = Умова]
+    Нехай $f(x)$ - $\mu$-опукла та диференційовна функція. Доведіть, що 
+    \begin{equation}
+        f(y) \geq f(x) + (\nabla f(x) , y - x) + \frac{\mu}{2} ||y - x||_2^2, \forall x, y \in E
+    \end{equation}
+\end{tcolorbox}
+
+За означенням $\mu$-опуклості маємо, що 
+\begin{equation}
+    (\nabla f(x) - \nabla f(y), x - y) \geq \mu ||x - y||_2^2
+\end{equation}
+
+За теоремою Лагранжа маємо, що
+\begin{equation}
+    f(y) - f(x) = (\nabla f(x), y - x) + \frac{1}{2} (\nabla f(x) - \nabla f(y), y - x)
+\end{equation}
+
+Підставляючи (2) в (3) маємо
+\begin{equation}
+    f(y) - f(x) \geq (\nabla f(x), y - x) + \frac{\mu}{2} ||x - y||_2^2
+\end{equation}
+
+Доведено
