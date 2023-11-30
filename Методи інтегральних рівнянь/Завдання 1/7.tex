@@ -1,0 +1,26 @@
+
+\section{задача}
+
+\begin{tcolorbox}[title=Умова]
+    Нехай $f : E \to R$ $L$-гладка функцiя. Доведiть, що
+    $$
+    f(y) \leq f(x)+(\nabla f(x), y-x)+\frac{L}{2}\|y-x\|^2 \quad \forall x, y \in \mathbb{R}^n .
+    $$
+\end{tcolorbox}
+
+Розв'язок. Можемо записати
+$$ f(y)=f(x)+\int_0^1(\nabla f(x +t(y-x)), y-x) dt = f(x)+(\nabla f(x), y-x)+
+\int_0^1(\nabla f(x+t(y-x))-\nabla f(x), y-x) d t .
+$$
+
+Тоді
+$$
+f(y)-f(x)-(\nabla f(x), y-x)= 
+\int_0^1(\nabla f(x+t(y-x))-\nabla f(x), y-x) d t \leq 
+\int_0^1\|\nabla f(x+t(y-x))-\nabla f(x)\| \cdot\|y-x\| d t$$
+$$
+f(y)-f(x)-(\nabla f(x), y-x) \leq 
+\int_0^1 t L\|y-x\|^2 d t=\frac{L}{2}\|y-x\|^2 .
+$$
+
+Доведено.

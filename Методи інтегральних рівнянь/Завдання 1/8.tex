@@ -1,0 +1,15 @@
+\section{задача}
+\begin{tcolorbox}[title=Умова]
+    Нехай $f : E \to \mathbb{R}$ — $L$-гладка функцiя. Доведiть, що
+    $$
+    f(y) \leq f(x)-\frac{1}{2 L}\|\nabla f(x)\|^2,
+    $$
+    де $y=x-\frac{1}{L} \nabla f(x)$.
+\end{tcolorbox}
+Розв'язок. Підставимо $y=x-\frac{1}{L} \nabla f(x)$ у нерівність З задачі 7:
+$$
+f(y) \leq f(x)+(\nabla f(x), y-x)+ \frac{L}{2}\|y-x\|^2= 
+f(x)-\frac{1}{L}\|\nabla f(x)\|^2+\frac{1}{2 L}\|\nabla f(x)\|^2=f(x)-\frac{1}{2 L}\|\nabla f(x)\|^2 .
+$$
+
+Доведено
