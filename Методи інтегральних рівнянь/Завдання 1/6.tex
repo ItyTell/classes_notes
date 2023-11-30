@@ -2,5 +2,17 @@
 
 \begin{tcolorbox}[title=Умова]
     Нехай $f - \mu$-сильно опукла та $L$-гладка функцiя, $x^*$ — точка мiнiмуму $f$. Доведiть, що для $x \in E$ має мiсце
+    $$ f(x) - f(x^*) \le \frac{1}{2\mu}\|\nabla f(x)\|_2^2 $$
 \end{tcolorbox}
 
+Для точок $x, x^*$ з третьої задачі маємо:
+
+$$ f(x^*) \geq f(x) + (\nabla f(x), x^* - x) + \frac{\mu}{2} \|x - x^*\|_2^2 $$
+
+
+$$ f(x) - f(x^*) \le (\nabla f(x), x - x^*) - \frac{\mu}{2} \|x - x^*\|_2^2 \le 
+\|\nabla f(x)\| \|x - x^*\| - \frac{\mu}{2} \|x - x^*\|_2^2$$
+
+$$ f(x) - f(x^*) \le \max\limits_{\Delta x > 0} (\|\nabla f(x)\| \Delta x - \frac{\mu}{2} \Delta x^2) = \frac{1}{2\mu}\|\nabla f(x)\|_2^2 $$
+
+Доведено
