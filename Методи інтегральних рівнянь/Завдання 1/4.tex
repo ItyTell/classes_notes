@@ -8,3 +8,22 @@
         (\nabla f(x) - \nabla f(y), x - y) \geq \mu ||x - y||_2^2
     \end{equation}
 \end{tcolorbox}
+
+Скористаємося завданням 3 і отримаємо дві нерівності:
+
+$$f(y) \geq f(x) + (\nabla f(x), y - x) + \frac{\mu}{2} ||y - x||_2^2$$
+$$f(x) \geq f(y) + (\nabla f(y), x - y) + \frac{\mu}{2} ||x - y||_2^2$$
+
+Віднімемо від одного рівняння інше і отримаємо:
+
+$$f(y) - (f(y) + (\nabla f(y), x - y) + \frac{\mu}{2} ||x - y||_2^2) 
+\geq f(x) + (\nabla f(x), y - x) + \frac{\mu}{2} ||y - x||_2^2 - f(x)$$
+
+$$ -(\nabla f(y), x - y) - \frac{\mu}{2} ||x - y||_2^2 \geq 
+-(\nabla f(x), x - y) + \frac{\mu}{2} ||x - y||_2^2$$
+
+
+$$(\nabla f(x) - \nabla f(y), x - y) \geq \mu ||x - y||_2^2$$
+
+
+Доведено.
