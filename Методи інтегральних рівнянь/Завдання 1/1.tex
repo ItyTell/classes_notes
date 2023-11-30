@@ -8,16 +8,18 @@
 \end{tcolorbox}
 
 $$f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x - h)}{h} = 
-\lim_{h \to 0} \frac{\|A(x + h) - b\| - \|Ax - b\|}{h} $$
+\lim_{h \to 0} \frac{\|A(x + h) - b\|^2 - \|Ax - b\|^2}{h} $$
 
 З лінійності оператора $A$ можемо записати:
 
-$$f'(x) = \lim_{h \to 0} \frac{\|Ax + Ah - b\| - \|Ax - b\|}{h}$$
+$$f'(x) = \lim_{h \to 0} \frac{\|Ax + Ah - b\|^2 - \|Ax - b\|^2}{h}$$
 
 Застосуємо нерівність трикутника:
 
-$$f'(x) = \lim_{h \to 0} \frac{\|Ax + Ah - b\| - \|Ax - b\|}{h} \le 
-\lim_{h \to 0} \frac{\|Ax - b \| + \|Ah\| - \|Ax - b\|}{h} =$$ 
-$$=\lim_{h \to 0} \frac{\|Ah\|}{h} = \lim_{h \to 0} \frac{O(h)}{h} = O(1) $$
+$$f'(x) = \lim_{h \to 0} \frac{\|Ax + Ah - b\|^2 - \|Ax - b\|^2}{h} \le \lim_{h \to 0} 
+\frac{\|Ax - b \|^2 + 2\|Ax - b\|\|Ah\| + \|Ah\|^2 - \|Ax - b\|^2}{h} =$$ 
+
+$$= \lim_{h \to 0} \frac{O(h) + O(h^2)}{h} = O(1) $$
+
 
 Норма неперервна і $f'(x) = O(1)$ - отже $f(x)$ диференційовна.
