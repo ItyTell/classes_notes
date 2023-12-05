@@ -1,4 +1,36 @@
 \section{задача}
 
 \begin{tcolorbox}[title=Умова]
+    Доведiть, що для гладкої задачi опуклого програмування $f \rightarrow \min\limits_C$ має мiсце:
+
+    $$ f(x) = \min\limits_C f \leftrightarrow x \in C \quad 
+    \text{та} \quad (\nabla f(x),  y - x) \geq 0, \quad \forall y \in C$$
 \end{tcolorbox}
+
+Для опуклої функції виконуеться нерівність (минула дз)
+$$
+f(y) \geq f(x)+(\nabla f(x), y-x),
+$$
+
+Якщо $\forall y \in C$ маємо $(\nabla f(x), y-x) \geq 0$ то
+$$
+f(y) \geq f(x)+(\nabla f(x), y-x) \geq f(x) \quad \forall y \in C,
+$$
+
+тобто $f(x)=\min\limits_C f$.
+
+
+Тепер навпаки(зпарва наліво), запишемо тепер наближення першого порядку для $f$ в $x$ :
+$$
+f(x) \leq f(y)=f(x)+(\nabla f(x), y-x)+o(\|y-x\|), \quad \forall y \in C .
+$$
+
+Оскільки допустима множина $C$ опукла, то разом із точками $x$ та $y$ до неї входять довільні їхні опуклі комбінації, тобто точки вигляду $(1-\lambda) x+\lambda y$, де $\lambda \in(0,1)$. Підставляемо ї у останно нерівність:
+$$
+0 \leq \lambda(\nabla f(x), y-x)+o(\lambda\|y-x\|), \quad \forall y \in C
+$$
+
+Спрямовуючи $\lambda \rightarrow 0$ бачимо, що знак правої частини визначається перпим доданком (властивості о-малого), а тому маємо нерівність
+$$
+0 \leq(\nabla f(x), y-x), \quad \forall y \in C .
+$$
