@@ -35,3 +35,29 @@ $$+k(k+2)(\|\nabla f(x_{k+1})\|^2 -  \|\nabla f(x_k)\|^2) + (2k + 3)\nabla f(x_{
 $$+L^2(\|x^{k+1} - x^*\|^2 - \|x^k - x^*\|^2)
 $$
 
+
+Проксимальний оператор нерозтягуючий. Використаємо це.
+$$
+\begin{aligned}
+& \left\|x_{k+1}-x^*\right\|^2= \\
+& =\left\|\operatorname{prox}_{\lambda g}\left(x_k-\lambda \nabla f\left(x_k\right)\right)-\operatorname{prox}_{\lambda g}\left(x^*-\lambda \nabla f\left(x^*\right)\right)\right\|^2 \leq \\
+& \quad \leq\left\|x_k-\lambda \nabla f\left(x_k\right)-x^*+\lambda \nabla f\left(x^*\right)\right\|^2=\left\|x_k-x^*\right\|^2- \\
+& \quad-2 \lambda\left(\nabla f\left(x_k\right)-\nabla f\left(x^*\right), x_k-x^*\right)+\lambda^2\left\|\nabla f\left(x_k\right)-\nabla f\left(x^*\right)\right\|^2 .
+\end{aligned}
+$$
+
+\pagebreak
+
+Тоді 
+
+$$
+V_{k+1} - V_{k} \le  (2k+1)L(f(x_{k+1}) - f(x_k)) + 2Lf(x_{k+1}) - 2Lf(x^*) +
+$$
+$$
+k(k+2)(\|\nabla f(x_{k+1})\|^2 -  \|\nabla f(x_k)\|^2) + (2k + 3)\nabla f(x_{k+1}) -
+$$
+$$
+-2L(\nabla f(x_k) - \nabla f(x^*), x_k - x^*) + \|\nabla f(x_k) - \nabla(x^*)\|^* \le
+$$
+Ну тут я старався, не знаю як тут далі треба, але сподіваюсь що хоч хід думок був 
+правильний.

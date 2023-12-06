@@ -17,7 +17,7 @@ $$
 \ddot{x} + 2 \sqrt{\mu} \dot{x} = 0 
 $$
 
-$$x(t) = e^{-2\mu t} + C_1$$
+$$x(t) = e^{-2\sqrt{\mu} t} + C_1$$
 
 З минулої задачі маємо, що
 
@@ -28,7 +28,9 @@ $$x^* \in argmin_{y \in E} \{f(y) + x(y)\} \quad
 $$x^* = prox_{\lambda x}(x^* + \lambda \nabla f(x^*))= argmin_{y \in E}
 \{\lambda x(y) + \frac{1}{2} \|x^* + \lambda \nabla f(x^*) - y\|^2 \}$$
 
-$f_* = x_{min}$
+$f_* = f_{min}$
+$x^*(0) = x_0, \quad \dot{x}^*(0) = 0$
 
+$$\frac{1}{2\sqrt{\mu}}\dot{x} + x = f(x) $$
 
-$$x^* <$$
+Не знаю, як далі, заплутався.

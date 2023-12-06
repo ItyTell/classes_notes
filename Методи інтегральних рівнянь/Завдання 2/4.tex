@@ -15,11 +15,24 @@ $$ g(p) - g(prox_g(y)) \geq (y -prox_g(y), p - prox_g(y)) =
 $$ g(p) - g(prox_g(x)) \geq (x -prox_g(x), p - prox_g(x)) = 
 (x - prox_g(x), p) - (x - prox_g(x), prox_g(x))$$
 
+Виберемо $p = prox_g(x)$ і $p = prox_g(y)$ відповідно. Отримаємо
 
-$$ g(prox_g(x)) - g(prox_g(y)) \geq (y -prox_g(y), prox_g(x) - prox_g(y))$$
+$$ g(prox_g(x)) - g(prox_g(y)) \geq 
+(y - prox_g(y), prox_g(x)) - (y - prox_g(y), prox_g(y))$$
+$$ g(prox_g(y)) - g(prox_g(x)) \geq 
+(x - prox_g(x), prox_g(y)) - (x - prox_g(x), prox_g(x))$$
 
+Додамо нерівності 
 
-$$ g(p) - g(prox_g(y)) \geq 
-(y - prox_g(y), p) - (y, prox_g(y)) + (prox_g(y), prox_g(y))$$
-$$ g(p) - g(prox_g(x)) \geq 
-(x - prox_g(x), p) - (x, prox_g(x)) +  (prox_g(x), prox_g(x))$$
+$$ 
+(y - prox_g(y), prox_g(x)) - (y - prox_g(y), prox_g(y)) +
+(x - prox_g(x), prox_g(y)) - (x - prox_g(x), prox_g(x)) \le 0
+$$
+
+$$
+(y, prox_g(x)) - (prox_g(y), prox_g(x)) - (y, prox_g(y)) +$$
+$$+(x, prox_g(y)) - (prox_g(x), prox_g(y)) - (x, prox_g(x)) + \|prox_g(x) - prox_g(y)\|^2 \le 0
+$$
+$$(prox_g(y) - prox_g(x), x - y) + \|prox_g(x) - prox_g(y)\|^2 \le 0 $$
+
+Доведено
