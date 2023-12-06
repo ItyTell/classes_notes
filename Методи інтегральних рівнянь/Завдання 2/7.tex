@@ -2,4 +2,36 @@
 \section{задача}
 
 \begin{tcolorbox}[title=Умова]
+    Доведіть, що для методу
+    $$
+    x_{k+1}=x_k-\frac{1}{L} \nabla f\left(x_k\right)
+    $$
+
+    послідовність
+    $$
+    V_k=(2 k+1) L\left(f\left(x_k\right)-f\left(x^*\right)\right)+k(k+2)\left\|\nabla f\left(x_k\right)\right\|_2^2+L^2\left\|x^k-x^*\right\|_2^2
+    $$
+
+    незростаюча.
+
+    Цей результат дає оцінку
+    $$
+    \left\|\nabla f\left(x_k\right)\right\|_2^2 \leq \frac{L}{k(k+2)}\left(L\left\|x^0-x^*\right\|_2^2+f\left(x_0\right)-f\left(x^*\right)\right) .
+    $$
 \end{tcolorbox}
+
+
+$$
+V_k=(2 k+1) L\left(f\left(x_k\right)-f\left(x^*\right)\right)+k(k+2)\left\|\nabla f\left(x_k\right)\right\|_2^2+L^2\left\|x^k-x^*\right\|_2^2
+$$
+
+$$
+V_{k+1}=(2 k+3) L\left(f\left(x_{k+1}\right)-f\left(x^*\right)\right)+(k + 1)(k+3)\left\|\nabla f\left(x_{k+1}\right)\right\|_2^2+L^2\left\|x^{k+1}-x^*\right\|_2^2
+$$
+
+$$
+V_{k+1} - V_{k} = (2k+1)L(f(x_{k+1}) - f(x_k)) + 2Lf(x_{k+1}) - 2Lf(x^*) +$$ 
+$$+k(k+2)(\|\nabla f(x_{k+1})\|^2 -  \|\nabla f(x_k)\|^2) + (2k + 3)\nabla f(x_{k+1}) + $$
+$$+L^2(\|x^{k+1} - x^*\|^2 - \|x^k - x^*\|^2)
+$$
+
