@@ -2,4 +2,19 @@
 
 
 \begin{tcolorbox}[title = Умова]
+    Нехай $ g: E \rightarrow \mathbb{R} \cup \{+\infty\} $ - власна замкнена та 
+    опукла функція. Довести, що 
+    $$ x = prox_g(x) \quad \Leftrightarrow \quad x \in argmin_{y \in E} g(y)$$
 \end{tcolorbox}
+
+Нехай$ x=\operatorname{prox}_g(x).$
+З минулої задачі маємо
+$$ g(y)-g(x) \geq(x-x, y-x) = 0 \quad \forall y \in E $$
+$$ g(y) \geq g(x) \quad \forall y \in E \rightarrow x \in argmin_{y \in E} g(y) $$
+
+В обернену сторону. Нехай $ x \in argmin_{y \in E} g(y) $ тоді
+
+$$ \operatorname{prox}_g(x)=
+\operatorname{argmin}_{y \in E}\{g(y)+\frac{1}{2}\|y-x\|^2\} = x$$
+адже в $x$ функція $g$ досягає свого мінімуму і $\|y - x\|$ не може бути меншою ніж у самій точці 
+$x$.

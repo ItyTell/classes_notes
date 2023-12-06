@@ -3,4 +3,21 @@
 
 
 \begin{tcolorbox}[title = Умова]
+    Нехай $g : E \rightarrow \mathbb{R} \cup {+\infty}$ — власна замкнена 
+    та опукла функцiя. Доведiть, що
+    $$(prox_g(x) - prox_g(y), x - y) \geq \|prox_g(x) -  prox_g(y)\|_2^2 \quad 
+    \forall x, y \in E$$
 \end{tcolorbox}
+
+З задачі 2 випливає, що при $z_1 = prox_g(y), z_2 = prox_g(x)$
+$$ g(p) - g(prox_g(y)) \geq (y -prox_g(y), p - prox_g(y)) = 
+(y - prox_g(y), p) - (y - prox_g(y), prox_g(y))$$
+$$ g(p) - g(prox_g(x)) \geq (x -prox_g(x), p - prox_g(x)) = 
+(x - prox_g(x), p) - (x - prox_g(x), prox_g(x))$$
+
+
+
+$$ g(p) - g(prox_g(y)) \geq 
+(y - prox_g(y), p) - (y, prox_g(y)) + (prox_g(y), prox_g(y))$$
+$$ g(p) - g(prox_g(x)) \geq 
+(x - prox_g(x), p) - (x, prox_g(x)) +  (prox_g(x), prox_g(x))$$

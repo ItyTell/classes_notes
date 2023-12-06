@@ -2,4 +2,51 @@
 
 
 \begin{tcolorbox}[title=Умова]
+    Нехай $ g: E \rightarrow \mathbb{R} \cup \{+\infty\} $ - власна замкнена 
+    опукла функція. Довести, що 
+    $$ z = prox_g(x) \quad 
+    \Leftrightarrow \quad g(y) - g(z) \geq (x - z, y - z) \quad 
+    \forall y \in E$$
 \end{tcolorbox}
+
+Нехай
+$$
+z=\operatorname{prox}_g(x)=\operatorname{argmin}_{y \in E}\left\{g(y)+\frac{1}{2}\|y-x\|^2\right\} .
+$$
+
+Тоді для $t \in(0,1)$
+$$
+g(z+t(y-z))+\frac{1}{2}\|z+t(y-z)-x\|^2 \geq g(z)+\frac{1}{2}\|z-x\|^2 .
+$$
+
+Опуклість $g$ дає
+$$
+(1-t) g(z)+\operatorname{tg}(y)+\frac{1}{2}\|z+t(y-z)-x\|^2 \geq g(z)+\frac{1}{2}\|z-x\|^2 .
+$$
+
+Далі
+$$
+g(y)-g(z) \geq \frac{t(x-z, y-z)+\frac{t^2}{2}\|y-z\|^2}{t} .
+$$
+
+Переходимо до границі при $t \rightarrow 0$. 
+
+Тепер навпаки. Нехай
+$$
+g(y)-g(z) \geq(x-z, y-z) \quad \forall y \in E .
+$$
+
+Оскільки
+$$
+2(x-z, y-z)=\|z-x\|^2-\|y-x\|^2+\|y-z\|^2,
+$$
+
+то
+$$
+g(y)+\frac{1}{2}\|y-x\|^2 \geq g(z)+\frac{1}{2}\|z-x\|^2+\frac{1}{2}\|y-z\|^2 \quad y \in E .
+$$
+
+Тому
+$$
+z=\operatorname{prox}_g(x)=\operatorname{argmin}_{y \in E}\left\{g(y)+\frac{1}{2}\|y-x\|^2\right\} .
+$$
