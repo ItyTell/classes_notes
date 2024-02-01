@@ -1,0 +1,194 @@
+\section*{Розв'язання}
+\begin{tcolorbox}[title=Завдлання 1]
+
+    \begin{enumerate}
+        \item Дослідити на збіжність послідовність $x_{n}$ у вказаних просторах.
+    \end{enumerate}
+
+    $\text { 1.1) } x_{n}= (\underbrace{0,0, \ldots, 0}_{n}, \frac{1}{n}, 
+    \frac{1}{n+1}, \frac{1}{n+2}, \ldots), E=l_{2}$
+    
+    
+    $$x_n \rightarrow 0 \in l_2 \text{ адже, } \|x_n\|_{l_2} = 
+    \sqrt{\sum_{k=0}^{\infty} \frac{1}{(n+k)^2}} \leq 
+    \sqrt{\sum_{k=0}^{\infty} \frac{1}{(n)^2}} = \frac{1}{n} \rightarrow 0 $$
+
+    $
+    \text { 1.2) } x_{n}=(\frac{1}{\sqrt{1}}, \frac{1}{\sqrt{2}}, 
+    \frac{1}{\sqrt{3}}, \ldots, \frac{1}{\sqrt{n}}, 0,0,0, \ldots), E=l_{2}$
+    $$
+    x_n \text{не збігається в }  l_2 \text{ адже, }
+    x_n \rightarrow_{\text{(поточково)}} (\frac{1}{\sqrt{1}}, 
+    \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{3}}, \ldots) = x
+    $$
+    $$
+    \sum_{k=1}^{\infty} \frac{1}{k}  \rightarrow \infty \Rightarrow 
+    x \notin l_2
+    $$
+    $
+    \text { 1.3) } x_{n}=\left(\frac{1}{\sqrt{1}}, \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{3}}, \ldots, \frac{1}{\sqrt{n}}, 0,0,0, \ldots\right), E=c_{0} \\
+    $
+    $$x \in c_0, \|x - x_n\| = \frac{1}{\sqrt{n + 1}} \rightarrow 0 $$
+    $ 
+    \text { 1.4) } x_{n}=\left(\frac{1}{1^{2}}, \frac{1}{2^{2}}, \frac{1}{3^{2}}, \ldots, \frac{1}{n^{2}}, 0,0,0, \ldots\right), E=l_{1} \\
+    $
+    $$
+    x \rightarrow_{\text{(поточково)}} (\frac{1}{1^{2}}, \frac{1}{2^{2}}, \frac{1}{3^{2}}, \ldots) = x, \sum_{k=1}^{\infty} \frac{1}{k^{2}}<\frac{\pi^2}{6} 
+    \Rightarrow x \in l_{1}, \|x - x_n\| = \sum_{k=n+1}^{\infty}\frac{1}{k^2}
+    \rightarrow 0
+    $$
+
+    $
+    \text { 1.5) } x_{n}=(\underbrace{\frac{1}{\ln n}, \frac{1}{\ln n}, \ldots, \frac{1}{\ln n}}_{n}, 0,0,0, \ldots), E=l_{2} \\
+    $
+
+    $$
+    x_n \rightarrow_{\text{(поточково)}} (\frac{1}{\ln 1}, \frac{1}{\ln 2}, \frac{1}{\ln 3}, \ldots) = x, \sum_{k=1}^{\infty} x_k^2 \rightarrow \infty 
+    \Rightarrow x \notin l_2
+    $$
+    
+    $
+    \text { 1.6) } x_{n}=(\underbrace{\frac{n^{2}+1}{n^{2}}, \frac{n^{2}+2}{n^{2}}, \ldots, \frac{n^{2}+n}{n^{2}}}_{n}, 1,1,1, \ldots), E=c \\
+    $
+    $$
+    x_n \rightarrow_{\text{(поточково)}} (1, 1, \ldots) = x \in c, 
+    \|x - x_n\| = \frac{1}{n} \rightarrow 0
+    $$
+
+    $
+    \text { 1.7) } x_{n}(t)=t^{n}, E=L_{2}([0,1]) \\
+    $
+    $$
+    x_n(t) \rightarrow_{\text{(поточково)}} x(t) = \begin{cases}
+        0, & t \in [0, 1) \\
+        1, & t = 1
+    \end{cases}
+    x_n(t) - x(t) = \begin{cases}
+        t^n, & t \in [0, 1) \\
+        0, & t = 1
+    \end{cases} 
+    $$
+    $$
+    \|x_n - x\| = \int_{0}^{1} t^n dt = \frac{1}{n + 1} \rightarrow 0
+    $$
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Завдлання 1 ]
+
+    $
+    \text { 1.8) } x_{n}(t)=t^{n}, E=C([0,1]) \\
+    $
+    $$x \notin C$$
+
+    $
+    \text { 1.9) } x_{n}(t)=t^{n}-t^{n+1}, E=C([0,1]) \\
+    $
+    $$
+    x_n \rightarrow_{\text{(поточково)}} x(t) = 0 \in C, 
+    \|x_n - x\| = \max_{[0, 1]} x_n(t) = \max_{[0, 1]}t^n(1 - t) \rightarrow 0
+    $$
+
+    $
+    \text { 1.10) } x_{n}(t)=\sin t-\sin \frac{t}{n}, E=C([0,1]) \\
+    $
+    $$
+    x_n \rightarrow_{\text{(поточково)}} x(t) = \sin t \in C,
+    \|x - x_n\| = \max_{[0, 1]} x_n(t) = \max_{[0, 1]}\sin \frac{t}{n} \rightarrow 0
+    $$
+
+    $
+    \text { 1.11) } x_{n}(t)=\sin t-\sin \frac{t}{n}, E=L_{3}([0,1]) \\
+    $
+    $$
+    \|x - x_n\|^3 = \int_{0}^{1} \sin^3 \frac{t}{n} dt \rightarrow 0
+    $$
+
+    $
+    1.12) x_{n}(t)=\min \{1, n|t|\}, E=L_{1}([-1,1]) \\
+    $
+
+    $$
+    x_n \rightarrow_{\text{(поточково)}} x(t) = \begin{cases}
+        1, & t \in [-1, 0) U (0 , 1] \\
+        0, & t = 0
+    \end{cases}
+    \|x - x_n\| = \int_{-1}^{1} x(t) - x_n(t) dt =
+    \frac{1}{n} \rightarrow 0
+    $$
+
+    $
+    \text { 1.13) } x_{n}(t)=\min \{1, n|t|\}, E=C([-1,1])
+    $
+
+    $$
+    x\notin C
+    $$
+
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[title = Завдання 2]
+    Показати що вирази 
+    $$
+    \|x\|_{1}=\int_{0}^{1}|x(t)| d t,\|x\|_{\infty}=\max _{t \in[0,1]}|x(t)|
+    $$
+    є нормами на множині $C([0,1])$. Чи будуть ці норми еквівалентними?
+    \begin{enumerate}
+        \item $\|x\|_{1}=\int\limits_{0}^{1}|x(t)| d t$
+        \begin{enumerate}
+            \item $\|x\|_{1} \geq 0, \|x\|_{1} = 0 \Leftrightarrow x = 0$
+            інтеграл - площа під графіком, $|x|$ - невід'ємна отже рівність лише 
+            при тотожньому нулі
+            \item $\|\alpha x\|_{1} = \int_{0}^{1}|\alpha x(t)| dt = 
+            |\alpha| \int_{0}^{1}|x(t)| dt = |\alpha| \|x\|_{1}$
+            \item $\|x + y\|_{1} = \int_{0}^{1}|x(t) + y(t)| dt \leq 
+            \int_{0}^{1}|x(t)| dt + \int_{0}^{1}|y(t)| dt = \|x\|_{1} + \|y\|_{1}$
+        \end{enumerate}
+        \item $\|x\|_{\infty}=\max _{t \in[0,1]}|x(t)|$
+        \begin{enumerate}
+            \item $\|x\|_{\infty} \geq 0, \|x\|_{\infty} = 0 \Leftrightarrow x = 0$ 
+            очевидно 
+            \item $\|\alpha x\|_{\infty} = \max_{t \in [0, 1]} |\alpha x(t)| = 
+            |\alpha| \max_{t \in [0, 1]} |x(t)| = |\alpha| \|x\|_{\infty}$
+            \item $\|x + y\|_{\infty} = \max_{t \in [0, 1]} |x(t) + y(t)| \leq 
+            \max_{t \in [0, 1]} |x(t)| + \max_{t \in [0, 1]} |y(t)| = 
+            \|x\|_{\infty} + \|y\|_{\infty}$
+        \end{enumerate}
+    \end{enumerate}
+    Якщо не помиляюсь то за теоремою Рімана ( та і загалом якщо мажорувати 
+    інтеграл прямокутником) отримаємо нерівність:
+    $$ \|x\|_1 = \int_{0}^{1}|x(t)| dt \leq \max_{[0, 1]} |x|=\|x\|_{\infty}$$
+    Тож норми можна вважати еквівалентними (якщо я правильно розумію, що це означає)
+\end{tcolorbox}
+
+\begin{tcolorbox}[ title = Завдання 3]
+    Довести, що $C([a, b]) \subset L_{2}([a, b])$, причому для довільного елемента $x \in C([a, b])$ має місце нерівність
+    $$
+    \|x\|_{L_{2}[a, b]} \leq(b-a)^{\frac{1}{2}}\|x\|_{C[a, b]} .
+    $$
+    За теоремою Рімана (це не точно)
+    $$
+    \|x\|_{L_{2}[a, b]} = \sqrt{\int_{a}^{b}|x(t)|^{2} d t} \leq 
+    \sqrt{(b - a)\max_{[a, b]} |x|^2} =
+    \sqrt{b - a} \|x\|_{C[a, b]}
+    $$
+    Отже $\forall x \in C[a, b], x \in L_2[a,b]$ 
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[title = Завдання 4]
+  Показати, що ЛНП простір $X=C([-1,1])$ з нормою
+$$
+\|x\|_{1}=\int_{-1}^{1}|x(t)| d t, x \in X
+$$
+
+не є повним.
+
+Тут очевидно треба придумати приклад фундаментально послідовності, яка збігається по нормі до функції, яка не належить $C([-1, 1])$.
+
+
+Наприклад, $x_n(t) = t^{2n}$ збігається по нормі до $x(t) = \begin{cases}
+    0, & t \in (-1, 1) \\
+    1, & |t| = 1
+    \end{cases} \notin C([-1, 1])$
+\end{tcolorbox}
