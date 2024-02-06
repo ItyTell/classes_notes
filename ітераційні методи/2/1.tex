@@ -71,21 +71,36 @@
     \text { 1.7) } f(x)=\int_{-1}^{1} \operatorname{sgn}(t) x(t) \mathrm{d} t, E=L_{2}([-1,1]) 
     $
 
+    $$ |f(x)| = |\int_{-1}^1sgn(t)x(t)dt| \le 
+    \sqrt{\int_{-1}^1x^2(t)dt} \sqrt{\int_{-1}^{1}sgn^2(t)dt} = 
+    \|x\| 2 \Rightarrow \|f\| = 2 $$
+
     $
     \text { 1.8) } f(x)=\int_{-1}^{1} \operatorname{sgn}(t) x(t) \mathrm{d} t, E=C([-1,1]) 
     $
+    
+    $$ |f(x)| = |\int_{-1}^1sgn(t)x(t)dt| \le 
+    \max_{t \in [-1, 1]} |x(t)| \int_{-1}^1sgn(t)dt ??? $$
+
 
     $
     \text { 1.9) } f(x)=\int_{-1}^{1} x^{2}(t) \mathrm{d} t, E=C([-1,1]) 
     $
 
+    $$ |f(x)| =  $$
+
     $
     \text { 1.10) } f(x)=x(0), E=C([-1,1]) 
     $
 
+    $$|f(x)| = |x(0)| \le \max_{t\in[-1, 1]}x(t) = \|x\| \Rightarrow \|f\| = 1$$
+
     $
     \text { 1.11) } f(x)=2 x(-1)-x(1), E=C([-1,1]) 
     $
+
+    $$ |f(x)| = |2x(-1) - x(1)| \le 3\|x\| (\text{досягається при } x(-1) = -x(1) = max x) 
+    \|f\| = 3 $$
 
     $
     \text { 1.12) } f(x)=x(0), E=C([0,1]),|x \|_{E}=\int_{0}^{1}| x(\xi) \mid d \xi 
@@ -95,5 +110,12 @@
     \text { 1.13) } f(x)=x^{\prime}(0)+x(1), E=C(1)([0,1]),|x|=\max _{t \in[0,1]}|x(t)|+\max _{t \in[0,1]}|x^{\prime}(t)|
     $
 
+    $$|f(t)| = |x`(0) + x(1)| \le \max _{t \in[0,1]}|x(t)|+\max _{t \in[0,1]}|x^{\prime}(t)|=
+    \|x\| \Rightarrow \|f\| = 1 $$
 
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Завдання 2]
+    2. Нехай $f: E \rightarrow \mathbb{R}$ - ненульовий ЛНФ. Довести, що область значень $f$ співпадає з $\mathbb{R}$.
 \end{tcolorbox}
