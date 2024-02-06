@@ -79,15 +79,20 @@
     \text { 1.8) } f(x)=\int_{-1}^{1} \operatorname{sgn}(t) x(t) \mathrm{d} t, E=C([-1,1]) 
     $
     
-    $$ |f(x)| = |\int_{-1}^1sgn(t)x(t)dt| \le 
-    \max_{t \in [-1, 1]} |x(t)| \int_{-1}^1sgn(t)dt ??? $$
+    $$ |f(x)| = |\int_{-1}^1sgn(t)x(t)dt| = 
+    | \int_{-1}^{0}-x(t)dt + \int_{0}^1x(t)dt | \le 
+    | \int_{-1}^{0}-x(t)dt| + | \int_{0}^1x(t)dt | \le $$ 
+    $$
+    \le | \max_{t\in[-1,0]}x(t)| + |\max_{t\in[0, 1]}x(t)| \le 
+    \max_{t\in[-1, 1]}|x(t)| = \|x\| \Rightarrow \|f\| = 1$$
 
 
     $
-    \text { 1.9) } f(x)=\int_{-1}^{1} x^{2}(t) \mathrm{d} t, E=C([-1,1]) 
+    \text { 1.9) } f(x)=\int_{-1}^{1}x^{2}(t) \mathrm{d} t, E=C([-1,1]) 
     $
 
-    $$ |f(x)| =  $$
+    $$ |f(x)| =|\int_{-1}^{1}x^{2}(t)dt| \le 
+    \max_{t \in [-1, 1]} x(t) 2 = 2\|x\| \Rightarrow \|f\| = 2  $$
 
     $
     \text { 1.10) } f(x)=x(0), E=C([-1,1]) 
