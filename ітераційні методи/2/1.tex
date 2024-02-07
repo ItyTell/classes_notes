@@ -123,4 +123,35 @@
 
 \begin{tcolorbox}[title=Завдання 2]
     2. Нехай $f: E \rightarrow \mathbb{R}$ - ненульовий ЛНФ. Довести, що область значень $f$ співпадає з $\mathbb{R}$.
+
+    $$f - \text{ненульовий лінійний функціонал, отже нехай } \exists x \in E, f(x) = a \neq 0$$
+    $$ \text{тоді } f(\frac{\alpha}{a} x) = \alpha , \forall \alpha \in R$$
+    Це і доводить, що область значень $f$ співпадає з $\mathbb{R}$.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Завдання 3]
+    3. Нехай $E-$ ЛНП і $f, g \in E^{*}$ такі, 
+    що $\operatorname{Ker} f \subset \operatorname{Ker} g$. 
+    Доведіть, що існує таке $\alpha \in \mathbb{R}$, що $g=\alpha f$.
+
+    $$ \forall x \in \operatorname{Ker} f, f(x) = 0 = g(x)$$
+    $$ \forall x \in \operatorname{Ker} g / \operatorname{Ker} f, g(x) = 0 \neq f(x)$$
+    Тут наче жодне $\alpha$ крім 0 не підійде, а при $\alpha = 0$ $g = 0$ тобто його ядро 
+    це весь простір і це єдиний випадок коли це вірно в глобальному сенсі.
+    (можливо десь помилка)
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[title=Завдання 4]
+    4. Нехай $X_{1}, X_{2}-$ ЛНП, $X_{1} \subset X_{2}$ і зі збіжності $x_{n} \rightarrow 
+    x$ у просторі $X_{1}$ випливає збіжність $x_{n} \rightarrow x$ у просторі $X_{2}$. 
+    Для довільного $f \in X_{2}^{*}$ покладемо $g(x)=f(x), x \in X_{1}$. 
+    Доведіть, що $g \in X_{1}^{*}$.
+
+    \begin{center}
+        \textbf{Доведення}
+    \end{center}
+
+    Це досить очевидне твердження зважаючи на те що $g(x)$ лінійний за побудовою,
+    і неперервний через те що зі збіжності $x_{n} \rightarrow x$ у просторі $X_{1}$ випливає збіжність $x_{n} \rightarrow x$ у просторі $X_{2}$.
 \end{tcolorbox}
