@@ -36,7 +36,8 @@
     $
 
     $$
-    |f(x)|= \sum_{k=1}^{\infty} \frac{|x_{k}|}{k} \le  
+    |f(x)|= \sum_{k=1}^{\infty} \frac{|x_{k}|}{k} \le \sum_{k=1}^{\infty} |x_{k}| = \|x\| 
+    \Rightarrow \|f\| = 1 
     $$
 
     $
@@ -110,6 +111,17 @@
     $
     \text { 1.12) } f(x)=x(0), E=C([0,1]),|x \|_{E}=\int_{0}^{1}| x(\xi) \mid d \xi 
     $
+
+    Нехай $\exists c \in \mathbb{R} : |f(x)| \le c\|x\|$
+    $$
+        x_n(t) = \begin{cases}
+                n - n^2t, t < \frac{1}{n} \\
+                0, t \geq \frac{1}{n}
+              \end{cases}$$
+    $$
+        |f(x)| = n, \|x\| = n * \frac{1}{2n} = \frac{1}{2}, 
+        n \le c \frac{1}{2} \Rightarrow \text{функціонал не неперервний}
+    $$
 
     $
     \text { 1.13) } f(x)=x^{\prime}(0)+x(1), E=C(1)([0,1]),|x|=\max _{t \in[0,1]}|x(t)|+\max _{t \in[0,1]}|x^{\prime}(t)|
