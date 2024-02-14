@@ -25,23 +25,69 @@
     \frac{1}{n+1}, \frac{1}{n+2}, \frac{1}{n+3}, \ldots), E=l_{p}, 1<p<\infty
     $
 
-    $$\forall f \in E^* f(x_n) < f(x_n^*) 
+    $$\forall f \in E^* |f(x_n)| < |f(x_n^*)| 
     \Rightarrow f(x_n) \rightarrow 0$$
     Де $x_n^*$ з минулого номера 
 
     $
     1.3) x^{(n)}=t^{n}, E=L_{p}([0,1]), 1 \leq p<\infty
     $
-    
 
-
+    $$ \forall f \in L_p^* \exists a \in L_q: f(x)=\int_{0}^{1} x(t)a(t)dt $$
+    $$ 0 < \int_{0}^{1} x_n(t)a(t)dt \le \max_{t \in [0, 1]} a \int_{0}^{1} x_n(t)dt $$
+    Звідси $f(x_n) \rightarrow 0, x_n \rightarrow 0$
 
 
     $
     1.4) x^{(n)}=\sqrt{n} \chi_{[0, \frac{1}{n}]}, E=L_{p}([0,1]), 1 \leq p \leq \infty
     $
 
+    Відкинемо значення $p$ при яких $\|x_n\|$ необмежена 
+
+    $$ \|x_n\| = \sqrt[p]{\int_{0}^{1}x_n^p(t) dt} = 
+    \sqrt[p]{\int_{0}^{\frac{1}{n}} \sqrt{n^p}dt } =
+    n^{\frac{p - 1}{2p}} $$
+
+    При $p>1, \|x_n\| \rightarrow \infty$
+
+
+    Залишається перевірити $p = 1$
+    $$\int_{0}^{\xi} x_n(t)dt \le \frac{1}{\sqrt{n}} \rightarrow 0$$
+
 \end{tcolorbox}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[title=Завдання 2]
+
+    Дослідити послідовності функціоналів на *-слабку збіжність та перевірити чи збіжна ця послідовність за нормою.
+
+    $
+    \text { 2.1) } f_{n}(x)=\int_{0}^{1} x(t) \cos (2 \pi n t) d t, E=L_{2}([0,1])
+    $
+
+    $$f_n = \int_{0}^{2\pi} x(\frac{t}{2\pi}) \cos (n t) d t$$
+
+    Якщо подивитись на графік косинуса стає очевидно, що зі з збільшенням $n$ густина 
+    хвильок стає більшою, при ліміті $n \rightarrow \infty$ в інтегралі кожне значення 
+    $x$ на відрізку $[0, 1]$ нівелюється протилежним (з множником відповідної хвилі) 
+    і залишиться лише множина міри нуль, тобто $f_n(x) \rightarrow 0$.
+
+    Це якесь не дуже строге доведення, за нормою взагалі хз як доводити.
+
+
+    $
+    \text { 2.2) } f_{n}(x)=n \int_{0}^{\frac{1}{2 n}}(1-2 n t) x(t) d t, E=C([0,1])
+    $
+    
+
+    З геометричного визначення інтегралу маємо:
+
+    $$f_n(x) = n \int_{0}^{\frac{1}{2n}}(1-2nt)x(t)dt \rightarrow 
+    n frac{1}{2n}x(0) = \frac{x(0)}{2} $$
+
+    
+    $
+    \text { 2.3) } f_{n}(x)=n \int_{0}^{1} t^{n} x(t) d t, E=C([0,1])
+    $
+
+    $$f_n(x) = n \int_{0}^{1} t^{n} x(t) d t \rightarrow 0 $$
 \end{tcolorbox}
