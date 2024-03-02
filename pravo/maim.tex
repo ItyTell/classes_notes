@@ -1,0 +1,60 @@
+
+\documentclass[a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ukrainian]{babel}
+\usepackage{caption, hyperref, tempora, authblk, setspace, amsmath, setspace,
+            titlesec, geometry, indentfirst, tempora, tikz, pgfplots,
+            datetime, cancel, tcolorbox}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\pgfplotsset{width=10cm,compat=1.9}
+
+\onehalfspacing
+
+
+\titleformat{\chapter}{\fontsize{18}{14}\bfseries\center\MakeUppercase}{РОЗДІЛ \thechapter}{0.5em}{}
+\titleformat{\section}{\fontsize{14}{14}\bfseries}{\thesection}{0.5em}{}
+    
+\geometry{left = 3cm, right = 1.5cm, top = 2cm, bottom = 2cm}
+\renewcommand {\baselinestretch} {1.25}
+
+\setlength{\parindent}{3em}
+\usetikzlibrary{positioning}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=orange,
+    filecolor=magenta,      
+    urlcolor=red,
+    pdftitle={Ітераційні методи},
+}
+
+\urlstyle{same}
+
+
+\title{
+    Реферат на тему:
+
+    Права та обов’язки роботодавця як страхувальника від
+нещасних випадків}
+\author{Микола Коломієць}
+\date{\today}
+\renewcommand{\familydefault}{phv}
+
+\tcbset{
+        colback=red!5!white,colframe=red!50!black,
+        fontlower=\spacing{0}\linespread{3000.8}\sffamily\bfserie,
+        code={\doublespacing}
+        }
+
+
+\begin{document}
+
+    \maketitle
+
+    \include{1.tex}
+
+\end{document}
