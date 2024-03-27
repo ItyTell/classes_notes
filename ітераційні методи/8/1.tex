@@ -1,0 +1,57 @@
+Розглянемо функціонал $\mathcal{P} \frac{1}{t}$, визначений як
+$$
+\left(\mathcal{P} \frac{1}{t}, \varphi\right)=\mathrm{v} \cdot \mathrm{p} \cdot \int_{\mathbb{R}} \frac{\varphi(t)}{t} d t .
+$$
+
+
+1. Доведіть, що $\mathcal{P} \frac{1}{x} \in \mathcal{D}^{\prime}(\mathbb{R})$.
+
+
+\begin{tcolorbox}[title=Розв'язок]
+    Лінійність очевидна:
+$$
+\begin{gathered}
+\left(\mathcal{P} \frac{1}{x}\right)(\alpha \varphi+\beta \psi)=V \cdot p \cdot \int_{-\infty}^{\infty} \frac{\alpha \varphi(x)+\beta \psi(x)}{x} d x=V \cdot p \cdot\left(\alpha \int_{-\infty}^{\infty} \frac{\varphi(x)}{x} d x+\right. \\
+\left.+\beta \int_{-\infty}^{\infty} \frac{\psi(x)}{x} d x\right)=\alpha\left(\mathcal{P} \frac{1}{x}\right)(\varphi)+\beta\left(\mathcal{P} \frac{1}{x}\right)(\psi), \forall \varphi, \psi \in \mathcal{D}(\mathbf{R}), \alpha, \beta \in \mathbf{R} .
+\end{gathered}
+$$
+
+Доведемо неперервність 
+$$\int_{-\infty}^{-\varepsilon} \frac{\varphi(x)}{x} d x = 
+\int_{\infty}^{\varepsilon} \frac{\varphi(-x)}{x} d x $$
+$$
+(\mathcal{P} \frac{1}{x})(\varphi)=\lim _{\varepsilon \rightarrow 0}(\int_{\infty}^{\varepsilon} \frac{\varphi(-x)}{x} d x+\int_{\varepsilon}^{\infty} \frac{\varphi(x)}{x} d x)=\lim _{\varepsilon \rightarrow 0} \int_{\varepsilon}^{\infty} \frac{\varphi(x)-\varphi(-x)}{x} d x= 
+\int_0^{\infty} \frac{\varphi(x)-\varphi(-x)}{x} d x .
+$$
+
+Нехай $\varphi_n(x) \rightarrow \varphi(x)$ при $n \rightarrow \infty$ в $D(\mathbf{R})$, тоді $\varphi_n(x) \rightrightarrows \varphi(x)$. З рівномірної збіжності послідовності:
+$$
+f\left(\varphi_n\right)=\int_0^{\infty} \frac{\varphi_n(x)-\varphi_n(-x)}{x} \rightarrow \int_0^{\infty} \frac{\varphi(x)-\varphi(-x)}{x}=f(\varphi) \quad \text { при } \quad n \rightarrow \infty .
+$$
+
+Отже $\mathcal{P} \frac{1}{x} \in \mathcal{D}^{\prime}(\mathbb{R})$
+\end{tcolorbox}
+
+2. Доведіть, що $\mathcal{P} \frac{1}{t}-$ сингулярна узагальнена функція.
+
+
+$\mathcal{P} \frac{1}{t} \in \mathcal{D}^{\prime}(\mathbb{R})$ і утреверена в результаті подібної процедури внаслідок якої отримуються регулярні функції, тобто якщо вона є регулярною то функція, з якої вона утворена має співпадати з $\frac{1}{t}$, що неможливо адже вона не належить множині.
+
+
+3. Доведіть, що для довільного $\alpha \in \mathcal{D}^{\prime}(\mathbb{R}), f \in C^{\infty}(\mathbb{R})$ має місце включення
+$$
+\operatorname{supp}(f \alpha) \subset \operatorname{supp} f \cap \operatorname{supp} \alpha .
+$$
+
+
+4. Обчислити границі у просторі $\mathcal{D}^{\prime}(\mathbb{R})$ при $\varepsilon \rightarrow 0+$ :
+$$
+1) f_{\varepsilon}(t)=\frac{1}{x} \sin \frac{x}{\varepsilon}
+$$
+$$
+\alpha_{f_\varepsilon}(\varphi) = 
+\int_{-\infty}^{\infty} \frac{1}{x}\sin(\frac{x}{\varepsilon})\varphi(x) dx
+$$
+$$
+2) f_{\varepsilon}(t)=\frac{1}{2 \sqrt{\pi \varepsilon}} \exp \left(-\frac{t^2}{4 \varepsilon}\right)
+$$
