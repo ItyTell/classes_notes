@@ -1,0 +1,45 @@
+
+Знайти похідні таких (узагальнених) функцій:
+
+
+1. $D^n|t| \sin t$, для $n=1,2,3$
+
+
+$$n = 1: D|t|\sin t = -\int_{\mathbb{R}} |t| \sin (t) \varphi (t) dt = 
+- \int_{0}^{\infty}t \sin(t) \varphi(t) dt
++ \int_{-\infty}^{0}t \sin(t) \varphi(t) dt =
+$$
+$$
+=-(t \sin(t) \varphi(t) |_{0}^{\infty} - \int_{0}^{\infty} \varphi(t) (t\cos(t) + \sin(t)) dt) +
+t \sin(t) \varphi(t) |_{-\infty}^{0} - \int_{-\infty}^{0} \varphi(t) (t\cos(t) + \sin(t)) dt=
+$$
+
+$$
+=\int_{0}^{\infty} \varphi(t) (t\cos(t) + \sin(t)) dt -
+\int_{-\infty}^{0} \varphi(t) (t\cos(t) + \sin(t)) dt=
+$$
+
+$$
+=\int_{\mathbb{R}} \varphi(t) (t\cos(t) + \sin(t)) dt 
+\Rightarrow D|t|\sin t = t\cos(t) + \sin(t)$$
+
+
+2. $D \ln |t|$
+
+
+3. $D \mathcal{P} \frac{1}{l}$
+
+
+4. $D^n \operatorname{sign} t$
+
+
+5. $D^n|t|$
+
+
+6. $D^n[t]$
+
+
+7. Довести рівність:
+$$
+D^2|\sin t|+|\sin t|=2 \sum_{k \in \mathbb{Z}} \delta_{k \pi}
+$$
