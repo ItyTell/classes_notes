@@ -5,9 +5,9 @@
 1. $D^n|t| \sin t$, для $n=1,2,3$
 
 
-$$n = 1: D|t|\sin t = -\int_{\mathbb{R}} |t| \sin (t) \varphi (t) dt = 
-- \int_{0}^{\infty}t \sin(t) \varphi(t) dt
-+ \int_{-\infty}^{0}t \sin(t) \varphi(t) dt =
+$$n = 1: D|t|\sin t = -\int_{\mathbb{R}} |t| \sin (t) \varphi' (t) dt = 
+- \int_{0}^{\infty}t \sin(t) \varphi'(t) dt
++ \int_{-\infty}^{0}t \sin(t) \varphi'(t) dt =
 $$
 $$
 =-(t \sin(t) \varphi(t) |_{0}^{\infty} - \int_{0}^{\infty} \varphi(t) (t\cos(t) + \sin(t)) dt) +
@@ -20,21 +20,56 @@ $$
 $$
 
 $$
-=\int_{\mathbb{R}} \varphi(t) (t\cos(t) + \sin(t)) dt 
-\Rightarrow D|t|\sin t = t\cos(t) + \sin(t)$$
+=\int_{\mathbb{R}} \varphi(t) (t\cos(t) + \sin(t)) sign(t) dt 
+\Rightarrow D|t|\sin t = (t\cos(t) + \sin(t)) sign(t)$$
+
+
+$$n=2 : D^2|t|\sin t = D(t\cos(t) + \sin(t)) = $$
 
 
 2. $D \ln |t|$
 
+    $$D \ln|t| = - \int_{\mathbb{R}} \ln |t| \varphi'(t)dt = 
+    - \int_{0}^{\infty} \ln t \varphi'(t)dt + 
+    \int_{0}^{\infty} \ln(-t) \varphi'(t)dt = $$
+
+    $$
+    - (\ln t \varphi(t)|_{0}^{\infty} - \int_{0}^{\infty} \frac{\varphi(t)}{t}dt) + 
+    \ln -t \varphi(t)|_{-\infty}^{0} - \int_{-\infty}^{0} \frac{\varphi(t)}{-t}dt=
+    \int_{0}^{\infty} \frac{\varphi(t)}{t}dt + \int_{-\infty}^{0} \frac{\varphi(t)}{t}dt = 
+    \int_{\mathbb{R}} \frac{\varphi(t)}{t}dt 
+    $$
+
+    $$D\ln|t| = \frac{1}{t}$$
+
 
 3. $D \mathcal{P} \frac{1}{l}$
 
+    $$D \mathcal{P} \frac{1}{t} = - \int_{\mathbb{R}} \frac{\varphi'}{t}dt = 
+    -\frac{\varphi}{t}|_{\mathbb{R}} - \int_{\mathbb{R}} \frac{\varphi}{t^2} 
+    \Rightarrow D \mathcal{P} \frac{1}{t} = -\frac{1}{t^2}$$
+
 
 4. $D^n \operatorname{sign} t$
+    
+    $$n=1: D sign(t) = -\int_{\mathbb{R}}sign(t) \varphi'(t)dt = 
+    -\int_{0}^{\infty} \varphi'(t)dt +\int_{-\infty}^{0} \varphi'(t)dt = 2\varphi(0)$$
 
+    $$ D sign(t) = 2\delta$$
+    
+    $$n>=2: D^n sign(t) = 2 (-1)^{n-1} \varphi^{(n-1)}(0)$$
 
 5. $D^n|t|$
 
+    $$n=1: D|t| = -\int_{\mathbb{R}} |t| \varphi'(t)dt = 
+    -\int_{0}^{\infty} t \varphi'(t)dt + \int_{-\infty}^{0} t \varphi'(t)dt = 
+    -\int_{0}^{\infty} \varphi(t)dt + \int_{-\infty}^{0} \varphi(t)dt = $$
+    $$
+    =-\int_{\mathbb{R}} sign(t) \varphi(t)dt \Rightarrow D|t| = sign(t)
+    $$
+
+    $$D^2 |t| = 2 \delta$$
+    $$D^n |t| = 2(-1)^n \varphi^{n-2}(0)$$
 
 6. $D^n[t]$
 
@@ -42,4 +77,23 @@ $$
 7. Довести рівність:
 $$
 D^2|\sin t|+|\sin t|=2 \sum_{k \in \mathbb{Z}} \delta_{k \pi}
+$$
+
+$$
+    D |\sin t| = -\int_{\mathbb{R}} |\sin t| \varphi'(t)dt = 
+    -\int_{0}^{\infty} \sin t \varphi'(t)dt + \int_{-\infty}^{0} \sin t \varphi'(t)dt =$$
+$$
+    =-\int_{0}^{\infty} \varphi(t) \cos t dt + \int_{-\infty}^{0} \varphi(t) \cos t dt =
+    -\int_{\mathbb{R}} sign(t) \varphi(t) \cos t dt
+$$
+
+$$
+    D^2 |\sin t| = -\int_{\mathbb{R}} sign(t) \cos(t) \varphi'(t)dt = 
+    -\int_{0}^{\infty} \cos(t) \varphi'(t)dt + \int_{-\infty}^{0} \cos(t) \varphi'(t)dt =
+$$
+
+$$
+    = - (-\varphi(0) + \int_{0}^{\infty} \varphi(t) \sin(t)dt) + 
+    \varphi(0) + \int_{-\infty}^{0} \varphi(t) \sin(t)dt = 
+    2\varphi(0) - \int_{\mathbb{R}} \varphi(t) \sin(t) dt
 $$
