@@ -1,1 +1,21 @@
 \chapter{Застосування до розв’язання модельної задачi}
+
+\section{Постановка задачi}
+
+\begin{equation}
+    \begin{cases}
+        - (\frac{\partial^2 u}{\partial x ^ 2} + \frac{\partial ^2 u}{\partial y^2}) = f(x,y) \\
+        0 < x < 1, 0 < y < 1 \\
+        u(0,y) = 0 \\
+        u(1,y) = A e^{By}\sin \omega \\
+        u(x,0) = A \sin \omega x \\
+        u(x,1) = A e^B \sin \omega x \\
+        f(x,y) = A e^{By} (\omega^2 - B^2)\sin \omega x
+    \end{cases}
+\end{equation}
+
+
+Розв'язок: $u(x, y) = A e^{By}\sin(\omega x)$
+
+
+Початкові значення: $A=B=1, \omega = \pi$
