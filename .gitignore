@@ -1,5 +1,7 @@
 
 *.aux
 
+**/materials/**
+
 **/aux_folder/*
 !*.pdf
