@@ -1,16 +1,19 @@
 \chapter{Застосування до розв’язання модельної задачi}
 
+Автор розділу - Коломієць Микола
+
 \section{Постановка задачi}
 
 \begin{equation}
     \begin{cases}
-        - (\frac{\partial^2 u}{\partial x ^ 2} + \frac{\partial ^2 u}{\partial y^2}) = f(x,y) \\
-        0 < x < 1, 0 < y < 1 \\
+        - (\frac{\partial^2 u}{\partial x_1 ^ 2} 
+        + \frac{\partial ^2 u}{\partial x_2^2}) = \varphi(x,y) \\
+        0 < x_1 < 1, 0 < x_2 < 1 \\
         u(0,y) = 0 \\
         u(1,y) = A e^{By}\sin \omega \\
         u(x,0) = A \sin \omega x \\
         u(x,1) = A e^B \sin \omega x \\
-        f(x,y) = A e^{By} (\omega^2 - B^2)\sin \omega x
+        \varphi(x,y) = A e^{By} (\omega^2 - B^2)\sin \omega x
     \end{cases}
 \end{equation}
 
@@ -22,17 +25,18 @@
 
 \section{Зведення}
 
-Нехай на прямокутній сітці:
+Візьмемо прямокутну сітку:
 $$ \omega = \{ x_{i,j} = (ih_1, jh_2) \in G, 
-0 \le i \le M, 0 \le j \le N, h_1 = l_1 / M, h_2 = l_2 / N \} $$
-з границею $\gamma$, на прямокутнику $G = \{0 \le x_\alpha \le l_\alpha, \alpha = 1,2 \}$
+0 \le i \le M, 0 \le j \le N, h_1 = 1 / M, h_2 = 1 / N \} $$
+з границею $\gamma$, на прямокутнику $G = \{0 \le x, y \le 1 \}$
 треба вирішити різнісну задачу Діріхле для рівняння Пуассона: 
-$$ y_{x_1, x_1} + y_{x_2, x_2} = -\phi(x), x\in \omega $$
+$$ y_{x_1, x_1} + y_{x_2, x_2} = -\varphi(x), x\in \omega $$
 $$ y(x) = g(x), x \in \gamma $$
 
 
-За допомогою зведення рівняння до рівняння першого порядку та з подальшою апроксимацією 
-цієї системи різницевою схемою, отримаємо задачу виду:
+Після зведення рівняння до рівняння першого порядку та подальшою 
+апроксимацією цієї системи різницевою схемою, отримаємо задачу з минулого 
+розділу:
 
 $$ -Y_{j-1} + C Y_j - Y_{j+1} = F_j $$
 $$ Y_0 = F_0, Y_N = F_N $$
@@ -48,14 +52,25 @@ $C$- квадратна матриця розмірності $M-1$ на $M-1$,
 $$\Lambda y =2 y-h_2^2 y_{\bar{x}_1 x_1}, \quad h_1 \le x_1 \le l_1-h_1,$$ 
 $$y =0, \quad x_1=0, l_1$$
 
-Отже матриця $C$- є трьохдоганальною симетричною матрицею, 
+Отже матриця $C$- є трьохдоганальною симетричною матрицею і тоді:
+
+
+$$CY_j=(\Lambda y(1, j), \quad \Lambda y(2, j), \ldots, \Lambda y(M-1, j))$$
+
+
 $F_j$- права частина, вектор розмірності $M-1$: 
 
 
 
 1) для $j = 1, 2, \dots, N-1$
-$$\boldsymbol{F}_j=\left(h_2^2 \bar{\varphi}(1, j), h_2^2 \varphi(2, j), \ldots, h_2^2 \varphi(M-2, j), h_2^2 \bar{\varphi}(M-1, j)\right),$$
+$$F_j=\left(h_2^2 \bar{\varphi}(1, j), h_2^2 \varphi(2, j), \ldots, h_2^2 \varphi(M-2, j), h_2^2 \bar{\varphi}(M-1, j)\right),$$
+
+
+Де 
+$$\begin{aligned} \bar{\varphi}(1, j) & =\varphi(1, j)+\frac{1}{h_1^2} g(0, j), \\ \bar{\varphi}(M-1, j) & =\varphi(M-1, j)+\frac{1}{h_1^2} g(M, j) .\end{aligned}$$
 
 
 2) для $j = 0, N$:
-$$\boldsymbol{F}_j=(g(1, j), g(2, j), \ldots, g(M-1, j)).$$
+$$F_j=(g(1, j), g(2, j), \ldots, g(M-1, j)).$$
+
+Далі застосовуємо наш алгоритм і отриуємо розвязок
